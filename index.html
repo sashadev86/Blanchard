@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard художественная галерея</title>
-  <link rel="icon" href="img/blanchardFavicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon/blanchardFavicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -47,14 +49,18 @@
           </ul>
         </nav>
 
-        <a href="#" class="header__enter">
-          <span class="header__enter-img">
-            <svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z" fill="currentColor"/>
+        <div class="header__enter_wrap">
+          <a href="#" class="header__enter">
+            <span class="header__enter-img">
+              <svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
+                  fill="currentColor" />
               </svg>
-          </span>
-          <span class="header__enter-text">Войти</span>
-        </a>
+            </span>
+            <span class="header__enter-text">Войти</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -70,10 +76,14 @@
             <div class="header__dropdown js-header-drop" data-target="one">
               <div class="header__dropdown-wrap" data-simplebar>
                 <ul class="header__drop-list">
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--tintoretto">Тинторрето</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--fridrih">Фридрих</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--leonardo">Леонардо</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--veroqu">Верроккьо</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--tintoretto">Тинторрето</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--fridrih">Фридрих</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--leonardo">Леонардо</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--veroqu">Верроккьо</a></li>
                 </ul>
               </div>
             </div>
@@ -87,10 +97,14 @@
             <div class="header__dropdown js-header-drop" data-target="two">
               <div class="header__dropdown-wrap" data-simplebar>
                 <ul class="header__drop-list">
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--mone">Моне</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--sisley">Сислей</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--mane">Мане</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--renuar">Ренуар</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--mone">Моне</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--sisley">Сислей</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--mane">Мане</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--renuar">Ренуар</a></li>
                 </ul>
               </div>
             </div>
@@ -104,10 +118,14 @@
             <div class="header__dropdown js-header-drop" data-target="three">
               <div class="header__dropdown-wrap" data-simplebar>
                 <ul class="header__drop-list">
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--vangok">Ван Гог</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--sezann">Сезанн</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--gogen">Гоген</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--siora">Сёра</a></li>
+                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--vangok">Ван
+                      Гог</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--sezann">Сезанн</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--gogen">Гоген</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--siora">Сёра</a></li>
                 </ul>
               </div>
             </div>
@@ -121,10 +139,14 @@
             <div class="header__dropdown js-header-drop" data-target="four">
               <div class="header__dropdown-wrap" data-simplebar>
                 <ul class="header__drop-list">
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--kandinski">Кандинский</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--marineti">Маринетти</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--malevich">Малевич</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--picasso">Пикассо</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--kandinski">Кандинский</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--marineti">Маринетти</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--malevich">Малевич</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--picasso">Пикассо</a></li>
                 </ul>
               </div>
             </div>
@@ -138,10 +160,14 @@
             <div class="header__dropdown js-header-drop" data-target="five">
               <div class="header__dropdown-wrap" data-simplebar>
                 <ul class="header__drop-list">
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--karra">Карра</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--pratella">Прателла</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--severini">Северини</a></li>
-                  <li class="header__dropdown-item"><a href="" class="header__item-link header__item-link--balla">Балла</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--karra">Карра</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--pratella">Прателла</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--severini">Северини</a></li>
+                  <li class="header__dropdown-item"><a href=""
+                      class="header__item-link header__item-link--balla">Балла</a></li>
                 </ul>
               </div>
             </div>
@@ -151,9 +177,12 @@
         <form action="/" class="header__form flex">
           <button class="header__form-btn">
             <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
-              </svg>
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+            </svg>
           </button>
 
           <input class="header__form-input" type="text" placeholder="Поиск по сайту">
@@ -175,7 +204,8 @@
     <div class="container">
       <div class="hero__content">
         <h1 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
-        <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+        <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий
+          создаёт предпосылки для новых предложений.</p>
         <button class="hero__btn">Подписаться на&nbsp;рассылку</button>
       </div>
     </div>
@@ -186,17 +216,104 @@
       <div class="about__content">
         <h2 class="about__title">О&nbsp;нас</h2>
         <p class="about__text">
-          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет
+          за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
+          высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
+          ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
         </p>
       </div>
     </div>
   </section>
 
+  <section class="gallery">
+    <div class="container gallery__container">
+      <div class="gallery__wrap">
+        <div class="gallery__left-content">
+          <h2 class="gallery__title">Галерея</h2>
+          <div class="gallery__select">
+            <h3 class="gallery__select-title">Фильтр:</h3>
+            <select name="" id="choices" class="gallery__select-choices choices">
+              <option value="">Живопись</option>
+              <option>Рисунок</option>
+              <option>Скульптура</option>
+            </select>
+          </div>
+          <div class="gallery_checkbox">
+            <label class="check__label">
+              <input type="checkbox" class="check__input">
+              <span class="check__text">XIX век</span>
+            </label>
+            <label class="check__label">
+              <input type="checkbox" class="check__input">
+              <span class="check__text">XX век</span>
+            </label>
+            <label class="check__label">
+              <input type="checkbox" class="check__input">
+              <span class="check__text">Современность</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="gallery__swiper">
+          <div class="gallery__navigation">
+            <button class="gallery__navigation-btn btn-prev" aria-label="К предыдущему слайду"></button>
+            <div class="gallery__pagination"></div>
+            <button class="gallery__navigation-btn btn-next" aria-label="К следующему слайду"></button>
+          </div>
+          <div class="swiper-container slides-container">
+            <div class="swiper-wrapper">
+              <a class="gallery__slide swiper-slide" href="#">
+                <picture>
+                  <img class="gallery__image" src="img/gallery/1gallery1920.jpg" alt="Картинка">
+                </picture>
+              </a>
+              <a class="gallery__slide swiper-slide" href="#">
+                <picture>
+                  <img class="gallery__image" src="img/gallery/2gallery1920.jpg" alt="">
+                </picture>
+              </a>
+              <a class="gallery__slide swiper-slide" href="#">
+                <picture>
+                  <img class="gallery__image" src="img/gallery/3gallery1920.jpg" alt="">
+                </picture>
+              </a>
+              <a class="gallery__slide swiper-slide" href="#">
+                <picture>
+                  <img class="gallery__image" src="img/gallery/4gallery1920.jpg" alt="">
+                </picture>
+              </a>
+              <a class="gallery__slide swiper-slide" href="#">
+                <picture>
+                  <img class="gallery__image" src="img/gallery/5gallery1920.jpg" alt="">
+                </picture>
+              </a>
+              <a class="gallery__slide swiper-slide" href="#">
+                <picture>
+                  <img class="gallery__image" src="img/gallery/6gallery1920.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="js/header__bottom-menu.js"></script>
+  <script src="js/header-bottom-menu.js"></script>
 
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/slider-hero.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
+  <script src="js/select.js"></script>
+
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script src="js/sliderGallery.js"></script>
 </body>
 
 </html>

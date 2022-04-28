@@ -743,12 +743,34 @@ ul {
 .choices__item.choices__item--choice.choices__item--selectable {
   font-weight: 400;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 16px;
   color: var(--white-color);
 }
 
 .choices__list.choices__list--dropdown {
   background-color: var(--black-color);
+  border-radius: 0px 0px 6px 6px;
+}
+
+.choices[data-type*=select-one]:after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-style: initial;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  margin-left: 10px;
+  margin-top: 1px;
+  transform: rotate(135deg);
+  transition: transform .3s ease-in-out;
+  transform-origin: center;
+  color: var(--white-color);
+}
+
+.choices[data-type*=select-one].is-open:after {
+  transform: rotate(-45deg) translateY(4px);
+  color: var(--white-color);
 }
 
 .choices .header_choices  {
@@ -764,7 +786,7 @@ ul {
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background-color: var(--black-color);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .choices__list {

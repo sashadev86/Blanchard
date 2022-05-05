@@ -1067,6 +1067,13 @@ ul {
   color: var(--catalog-date-artist);
 }
 
+.catalog__artist-link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--violet-color);
+}
+
 .catalog__artist-text {
   font-weight: 400;
   font-size: 16px;
@@ -1098,7 +1105,7 @@ ul {
 
 .accordion__artist:first-child .accordion__heading:hover,
 .accordion__heading:hover {
-  border-color: var(--violet-color);
+  border-color: var(--dark-violet-color);
 }
 
 .accordion__artist:first-child .accordion__heading:active,
@@ -1208,10 +1215,51 @@ ul {
 }
 
 .accordion__painter-btn {
+  position: relative;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: var(--title-text-color);
+}
+
+.accordion__painter-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--violet-color);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.accordion__painter-btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* tabs */
+
+.tab-content {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  min-height: 500px;
+  transform: translateX(-100px);
+  transition: .3s ease-in-out;
+  opacity: 1s ease-in-out;
+  transform: .8s ease-in-out;
+}
+
+.tab-content-active {
+  visibility: visible;
+  position: relative;
+  opacity: 1;
+  transform: none;
 }
 
 

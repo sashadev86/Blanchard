@@ -84,14 +84,16 @@ ul {
 }
 
 :root {
-  --black-color: #000000;
   --white-color: #ffffff;
+  --black-color: #000000;
   --title-text-color: #333333;
   --dark-violet-color: #7943A4;
   --violet-color: #9D5CD0;
   --light-purple: #C283F3;
+  --violet-ultra-light: #D1A9F0;
   --gallery-navigation-btn-color: #666666;
   --catalog-date-artist: #999999;
+  --light-middle-gray: #CACACA;
 }
 
 .container {
@@ -1084,40 +1086,53 @@ ul {
 
 /* accordion */
 
-.accordion__artist:first-child .accordion__heading {
-  border-top: 1px solid lightgray;
+.accordion__item:first-child .accordion__heading {
+  border-top: 1px solid var(--light-middle-gray);
 }
 
 .accordion__heading {
-  display: flex;
-  width: 100%;
   position: relative;
+  display: block;
+  width: 100%;
   margin-bottom: 0;
   margin-top: -1px;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid lightgray;
-  transition: border-color .3s ease;
-  padding: 40px 20px;
-  font-weight: 600;
+  border-bottom: 1px solid var(--light-middle-gray);
+  border-right: none;
+  border-left: none;
+  padding: 41px 120px 41px 0;
   font-size: 24px;
-  line-height: 32px;
-  color: var(--title-text-color);
+  text-align: left;
+  background-color: transparent;
   cursor: pointer;
-  transition: color .3s ease, border-color .3s ease;
+  outline: none;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out;
 }
 
-.accordion__content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid transparent;
+.accordion__item:first-child .accordion__heading:hover,
+.accordion__heading:hover {
+  border-color: var(--violet-color);
 }
 
-.accordion__content.ui-accordion-content-active {
-  border-color: lightgray;
+.accordion__item:first-child .accordion__heading:active,
+.accordion__heading:active,
+.is-active.accordion__item:first-child .accordion__heading,
+.is-active.accordion__item .accordion__heading {
+  border-color: var(--dark-violet-color);
+  color: var(--dark-violet-color);
 }
 
 .accordion__heading-text {
   position: relative;
+}
+
+.accordion__heading-text-wrap {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  outline: none;
 }
 
 .accordion__heading-text::before {
@@ -1128,51 +1143,76 @@ ul {
   width: calc(100% + 8px);
   height: 100%;
   transform: translate(-50%, -50%) scaleX(0);
-  background-color: var(--violet-color);
-  transition: transform .3s ease;
-  z-index: -1;
-}
-
-.accordion__heading:focus-visible .accordion__heading-text::before {
-  transform: translate(-50%, -50%) scaleX(1);
-}
-
-.accordion__heading:focus-visible {
-  outline: none;
-  color: var(--white-color);
-}
-
-.accordion__artist:first-child:hover .accordion__heading,
-.accordion__artist:hover .accordion__heading {
-  border-color: var(--violet-color);
+  background-color: var(--dark-violet-color);
+  transition: transform .3s ease-in-out;
 }
 
 .accordion__heading:hover {
   color: var(--violet-color);
 }
 
+.accordion__heading:active {
+  color: var(--dark-violet-color);
+}
+
+.accordion__heading:focus-visible:not(:active) {
+  color: var(--white-color);
+  outline: none;
+}
+
+.accordion__heading:focus-visible:not(:active) .accordion__heading-text::before {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
 .head-icon {
   position: absolute;
   top: 50%;
-  right: 30px;
-  width: 60px;
-  height: 60px;
+  right: 0;
+  width: 50px;
+  height: 50px;
   transform: translateY(-50%) rotate(-180deg);
   transition: background-color .3s, .6s ease-in-out, transform .3s, .6s ease-in-out;
 }
 
 .head-icon-round {
-  transition: fill .5s ease, stroke .5s ease;
+  transition: fill .5s ease-in-out, stroke .5s ease-in-out;
 }
 
-.accordion__heading.ui-accordion-header-active .head-icon {
+.accordion__heading:hover .head-icon-round,
+.accordion__heading:focus-visible .head-icon-round {
+  fill: var(--violet-ultra-light);
+  stroke: var(--violet-ultra-light);
+}
+
+.accordion__heading:hover .head-icon::before,
+.accordion__heading:hover .head-icon::after,
+.accordion__heading:focus-visible .head-icon::before,
+.accordion__heading:focus-visible .head-icon::after {
+  background-color: var(--white-color);
+}
+
+.is-active .head-icon {
   transform: translateY(-50%) rotate(0);
 }
 
+.is-active .accordion__heading .head-icon-round {
+  fill: var(--violet-ultra-light);
+  stroke: var(--violet-color);
+}
 
-.accordion__heading:focus-visible .head-icon-round,
-.accordion__heading:hover .head-icon-round {
-  fill: var(--light-purple);
+.accordion__content {
+  overflow: hidden;
+  visibility: hidden;
+  margin-top: -1px;
+  border-bottom: 1px solid transparent;
+  max-height: 0;
+  transition: all 3s ease-in-out;
+}
+
+.is-active .accordion__content {
+  visibility: visible;
+  border-color: var(--light-middle-gray);
+  max-height: 100%;
 }
 
 .accordion__content-wrap {

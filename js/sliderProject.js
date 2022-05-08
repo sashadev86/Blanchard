@@ -21,6 +21,19 @@ const projectSwiper = new Swiper('.project__swiper', {
     }
   },
 
+  loop: true,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  a11y: {
+    paginationBulletMessage: "Перейти на слайд {{index}}",
+    slideLabelMessage: "Слайд номер {{index}} из общего количества {{slidesLength}}"
+  },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

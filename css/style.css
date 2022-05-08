@@ -1741,7 +1741,20 @@ ul {
 }
 
 .project__swiper-wrap {
-  max-width: 1450px;
+  
+}
+
+.project__swiper-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: #ECECEC;
+}
+
+.project__swiper-btn.swiper-button-prev::after,
+.project__swiper-btn.swiper-button-next::after {
+  font-size: 12px;
+  color: var(--black-color);
 }
 
 

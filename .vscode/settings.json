@@ -1,0 +1,3 @@
+{
+  "attrsSorter.order": ["class", "id", "href", "src", "data-.+", "aria-.+", ]
+}

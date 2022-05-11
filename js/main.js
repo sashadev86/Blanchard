@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
     searchEnabled: false,
     classNames: {
       containerOuter: 'choices header_choices',
-     },
-     shouldSort: false,
-     itemSelectText: '',
+    },
+    shouldSort: false,
+    itemSelectText: '',
   });
 
   // select finish
@@ -146,6 +146,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // sliderGallery finish
 
+  // modalsGallery start
+
+  const btns = document.querySelectorAll('.gallery__slide');
+  const modalOverlay = document.querySelector('.modal-overlay ');
+  const modals = document.querySelectorAll('.modal');
+  const body = document.body;
+  const fixBlocks = document.querySelectorAll('.fix-block');
+
+  let disableScroll = function () {
+    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+    let pagePosition = window.scrollY;
+    fixBlocks.forEach((el) => {
+      el.style.paddingRight = paddingOffset;
+    });
+    body.style.paddingRight = paddingOffset;
+    body.classList.add('disable-scroll');
+    // body.dataset.position = pagePosition;
+    // body.style.top = -pagePosition + 'px';
+  }
+
+  let enableScroll = function () {
+    let pagePosition = parseInt(document.body.dataset.position, 10);
+    body.style.top = 'auto';
+    body.classList.remove('disable-scroll');
+    fixBlocks.forEach((el) => {
+      el.style.paddingRight = '0px';
+    });
+    body.style.paddingRight = '0px';
+    // window.scroll({top: pagePosition, left: 0});
+    // body.removeAttribute('data-position');
+  }
+
+  btns.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      let path = e.currentTarget.getAttribute('data-path');
+
+      disableScroll();
+
+      modals.forEach((el) => {
+        el.classList.remove('modal--visible');
+      });
+
+      document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+      modalOverlay.classList.add('modal-overlay--visible');
+    });
+  });
+
+  modalOverlay.addEventListener('click', (e) => {
+
+    enableScroll();
+
+    if (e.target == modalOverlay) {
+      modalOverlay.classList.remove('modal-overlay--visible');
+      modals.forEach((el) => {
+        el.classList.remove('modal--visible');
+      });
+    }
+  });
+
+  // modalsGallery finish
+
+
   // accordion start
 
   (() => {
@@ -158,18 +220,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // tabs start
 
-  document.querySelectorAll('.tabs-btn').forEach(function(tabsBtn) {
-    tabsBtn.addEventListener('click', function(event) {
+  document.querySelectorAll('.tabs-btn').forEach(function (tabsBtn) {
+    tabsBtn.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 
-      document.querySelectorAll('.tab-content').forEach(function(tabContent) {
+      document.querySelectorAll('.tab-content').forEach(function (tabContent) {
         tabContent.classList.remove('tab-content-active');
       });
 
-      document.querySelectorAll('.accordion__painter-btn').forEach(function(btn) {
+      document.querySelectorAll('.accordion__painter-btn').forEach(function (btn) {
         btn.classList.remove('tabs-btn-active');
       });
-        event.currentTarget.classList.add('tabs-btn-active');
+      event.currentTarget.classList.add('tabs-btn-active');
 
       document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active');
     });
@@ -314,51 +376,51 @@ document.addEventListener("DOMContentLoaded", function () {
   // inputmask start
 
   var inputTel = document.querySelector("input[type='tel']");
-var im = new Inputmask("+7 (999)-999-99-99");
+  var im = new Inputmask("+7 (999)-999-99-99");
 
-im.mask(inputTel);
+  im.mask(inputTel);
 
   // inputmask finish
 
   // myMap start
 
   ymaps.ready(init);
-function init() {
-  const mapElem = document.querySelector('myMap');
-  const myMap = new ymaps.Map(
-    "myMap",
-    {
-      center: [55.760236, 37.614877],
-      zoom: 14,
-      controls: ['geolocationControl', 'zoomControl']
-    },
-    {
-      suppressMapOpenBlock: true,
-      geolocationControlSize: "large",
-      geolocationControlPosition:  { top: "370px", right: "20px" },
-      geolocationControlFloat: 'none',
-      zoomControlSize: "small",
-      zoomControlFloat: "none",
-      zoomControlPosition: { top: "300px", right: "20px" }
-    }
-  );
+  function init() {
+    const mapElem = document.querySelector('myMap');
+    const myMap = new ymaps.Map(
+      "myMap",
+      {
+        center: [55.760236, 37.614877],
+        zoom: 14,
+        controls: ['geolocationControl', 'zoomControl']
+      },
+      {
+        suppressMapOpenBlock: true,
+        geolocationControlSize: "large",
+        geolocationControlPosition: { top: "370px", right: "20px" },
+        geolocationControlFloat: 'none',
+        zoomControlSize: "small",
+        zoomControlFloat: "none",
+        zoomControlPosition: { top: "300px", right: "20px" }
+      }
+    );
 
-  myMap.behaviors.disable('scrollZoom');
+    myMap.behaviors.disable('scrollZoom');
 
-  const myPlacemark = new ymaps.Placemark(
-    [55.760236, 37.614877],
-    {},
-    {
-      iconLayout: "default#image",
-      iconImageHref: "img/contacts/customPoint.svg",
-      iconImageSize: [20, 20],
-      iconImageOffset: [-20, -20],
-    }
-  );
+    const myPlacemark = new ymaps.Placemark(
+      [55.760236, 37.614877],
+      {},
+      {
+        iconLayout: "default#image",
+        iconImageHref: "img/contacts/customPoint.svg",
+        iconImageSize: [20, 20],
+        iconImageOffset: [-20, -20],
+      }
+    );
 
-  myMap.geoObjects.add(myPlacemark);
-  myMap.container.fitToViewport();
-}
+    myMap.geoObjects.add(myPlacemark);
+    myMap.container.fitToViewport();
+  }
 
   // myMap finish
 
@@ -397,20 +459,20 @@ function init() {
     animateScroll();
   }
 
-  const initScrollToAnchor = () => {
-    const anchorLinks = document.querySelectorAll('.header__nav-link[data-scroll-to]');
-    if (anchorLinks.length) {
-      anchorLinks.forEach((link) => {
-        link.addEventListener('click', (e) => {
-          const currentBlock = link.getAttribute('href');
-          const blockTop = document.querySelector(currentBlock).offsetTop;
-          e.preventDefault();
-          scrollTo(blockTop, 400);
-        });
-      });
-    }
-  };
-  initScrollToAnchor();
+  // const initScrollToAnchor = () => {
+  //   const anchorLinks = document.querySelectorAll('.header__nav-link[data-scroll-to]');
+  //   if (anchorLinks.length) {
+  //     anchorLinks.forEach((link) => {
+  //       link.addEventListener('click', (e) => {
+  //         const currentBlock = link.getAttribute('href');
+  //         const blockTop = document.querySelector(currentBlock).offsetTop;
+  //         e.preventDefault();
+  //         scrollTo(blockTop, 400);
+  //       });
+  //     });
+  //   }
+  // };
+  // initScrollToAnchor();
 
 
   const initBtnToTop = () => {

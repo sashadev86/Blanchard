@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modals = document.querySelectorAll('.modal');
   const body = document.body;
   const fixBlocks = document.querySelectorAll('.fix-block');
+  const closeBtns = document.querySelectorAll('.modal__info-close');
 
   let disableScroll = function () {
     let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
@@ -162,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     body.style.paddingRight = paddingOffset;
     body.classList.add('disable-scroll');
-    // body.dataset.position = pagePosition;
+    body.dataset.position = pagePosition;
     // body.style.top = -pagePosition + 'px';
   }
 
@@ -174,8 +175,8 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.paddingRight = '0px';
     });
     body.style.paddingRight = '0px';
-    // window.scroll({top: pagePosition, left: 0});
-    // body.removeAttribute('data-position');
+    window.scroll({top: pagePosition, left: 0});
+    body.removeAttribute('data-position');
   }
 
   btns.forEach((el) => {
@@ -193,15 +194,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  modalOverlay.addEventListener('click', (e) => {
+  closeBtns.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      closeModals();
+    });
+  });
 
+  let closeModals = () => {
     enableScroll();
-
-    if (e.target == modalOverlay) {
       modalOverlay.classList.remove('modal-overlay--visible');
       modals.forEach((el) => {
         el.classList.remove('modal--visible');
       });
+  }
+
+  modalOverlay.addEventListener('click', (e) => {
+
+
+    if (e.target == modalOverlay) {
+      closeModals();
     }
   });
 

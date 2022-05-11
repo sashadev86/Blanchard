@@ -105,7 +105,8 @@ ul {
 }
 
 .container {
-  max-width: 1600px;
+  max-width: 1700px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -176,65 +177,37 @@ ul {
   color: var(--dark-violet-color);
 }
 
-.header__enter_wrap {
+.header__enter-wrap {
   display: flex;
   align-items: center;
   position: relative;
 }
 
 .header__enter {
+  position: relative;
   display: flex;
   align-items: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
   color: var(--white-color);
-}
-
-.header__enter-img {
-  margin-right: 7px;
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 14px;
-  overflow: hidden;
-  transition: all .3s ease-in-out;
-}
-
-.header__enter-text {
-  transition: color .3s ease-in-out;
-}
-
-.header__enter-img svg {
-  flex: 0 0 18px;
-}
-
-.header__enter:focus-visible {
   outline: none;
-  padding: 5px 0;
+}
+
+.header__enter::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -7px;
+  left: -7px;
+  right: -7px;
   background-color: var(--dark-violet-color);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
 }
 
 .header__enter:focus-visible::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 9%;
-  left: -10px;
-  height: 35px;
-  width: 10px;
-  background-color: var(--dark-violet-color);
-}
-
-.header__enter:focus-visible::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 9%;
-  right: -10px;
-  height: 35px;
-  width: 10px;
-  background-color: var(--dark-violet-color);
+  opacity: 1;
 }
 
 .header__enter:hover .header__enter-text {
@@ -256,6 +229,25 @@ ul {
   color: var(--dark-violet-color);
 }
 
+.header__enter-img {
+  margin-right: 7px;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 14px;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  z-index: 1;
+}
+
+.header__enter-img svg {
+  flex: 0 0 18px;
+}
+
+.header__enter-text {
+  transition: color .3s ease-in-out;
+  z-index: 1;
+}
 
 /* header__bottom */
 
@@ -809,13 +801,12 @@ ul {
 .choices[data-type*=select-one]:after {
   content: "";
   display: inline-block;
+  top: 17px;
   width: 7px;
   height: 7px;
   border-style: initial;
   border-top: 1px solid;
   border-right: 1px solid;
-  margin-left: 10px;
-  margin-top: 1px;
   transform: rotate(135deg);
   transition: transform .3s ease-in-out;
   transform-origin: center;
@@ -823,8 +814,10 @@ ul {
 }
 
 .choices[data-type*=select-one].is-open:after {
-  transform: rotate(-45deg) translateY(4px);
+  transform: rotate(-45deg);
   color: var(--white-color);
+  border-color: var(--white-color);
+  top: 26px;
 }
 
 .choices .header_choices  {
@@ -901,6 +894,7 @@ ul {
   transform: translate(-50%,-50%);
   width: 4px;
   height: 4px;
+  border-radius: 100%;
   opacity: 0;
   background-image: url('../img/gallery/check.svg');
   background-repeat: no-repeat;
@@ -969,6 +963,7 @@ ul {
   border: 1px solid var(--black-color);
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color .3s ease-in-out, border .3s ease-in-out;
 }
 
 .gallery__navigation-btn:focus-visible {
@@ -986,9 +981,22 @@ ul {
   transform-origin: center;
 }
 
-.gallery__navigation-btn.swiper-button-disabled {
+.gallery__navigation-btn.swiper-button-disabled,
+.gallery__navigation-btn.swiper-button-disabled:hover,
+.gallery__navigation-btn.swiper-button-disabled:active {
   cursor: auto;
   background-color: var(--gray-05-color);
+  border: 1px solid var(--gray-05-color);
+}
+
+.gallery__navigation-btn:hover {
+  background-color: var(--violet-color);
+  border-color: var(--violet-color);
+}
+
+.gallery__navigation-btn:active {
+  background-color: var(--dark-violet-color);
+  border: 2px solid var(--black-color);
 }
 
 .btn-prev {
@@ -996,13 +1004,13 @@ ul {
 }
 
 .btn-next::before {
-  left: calc(50% - 7px / 2);
+  left: calc(50% - 10px / 2);
   border-top: 1px solid var(--white-color);
   border-right: 1px solid var(--white-color);
 }
 
 .btn-prev::before {
-  left: calc(50% - 7px / 2);
+  left: calc(50% - 5px / 2);
   border-left: 1px solid var(--white-color);
   border-bottom: 1px solid var(--white-color);
 }

@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.paddingRight = '0px';
     });
     body.style.paddingRight = '0px';
-    window.scroll({top: pagePosition, left: 0});
+    window.scroll({ top: pagePosition, left: 0 });
     body.removeAttribute('data-position');
   }
 
@@ -200,16 +200,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  document.addEventListener('keydown', function (e) {
+    if (e.key === "Escape") {
+      closeModals();
+    }
+  });
+
+  // функция закрытия модалок
   let closeModals = () => {
     enableScroll();
-      modalOverlay.classList.remove('modal-overlay--visible');
-      modals.forEach((el) => {
-        el.classList.remove('modal--visible');
-      });
+    modalOverlay.classList.remove('modal-overlay--visible');
+    modals.forEach((el) => {
+      el.classList.remove('modal--visible');
+    });
   }
 
   modalOverlay.addEventListener('click', (e) => {
-
 
     if (e.target == modalOverlay) {
       closeModals();
@@ -271,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // when window width is >= 640px
       640: {
         slidesPerView: 3,
-        spaceBetween: 50
+        spaceBetween: 47
       }
     },
 
@@ -281,8 +287,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.events__swiper-btn--next',
+      prevEl: '.events__swiper-btn--prev',
     },
   });
 
@@ -313,6 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Default parameters
     slidesPerView: 1,
     spaceBetween: 10,
+    loop: true,
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
@@ -332,8 +339,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
 
-    loop: true,
-
     keyboard: {
       enabled: true,
       onlyInViewport: true,
@@ -346,8 +351,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.project__swiper-btn--next',
+      prevEl: '.project__swiper-btn--prev',
     },
   });
 

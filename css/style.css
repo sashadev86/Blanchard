@@ -72,6 +72,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   border: 0;
+  outline: none;
 }
 
 ul {
@@ -1987,13 +1988,11 @@ ul {
 
 .project__swiper-btn:hover {
   border: 2px solid var(--violet-ultra-light);
-
   background-color: var(--violet-ultra-light);
 }
 
 .project__swiper-btn:active {
   border: 2px solid var(--violet-color);
-
   background-color: var(--violet-ultra-light);
 }
 
@@ -2047,11 +2046,17 @@ ul {
 }
 
 .contacts__form-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--title-text-color);
+  padding: 9px 24px;
   max-width: 270px;
   margin-right: 20px;
-  padding: 9px 24px;
   border: 1px solid var(--title-text-color);
   border-radius: 100px;
+  outline: none;
+  transition: background-color .3s ease-in-out;
 }
 
 .contacts__form-input::placeholder {
@@ -2059,8 +2064,18 @@ ul {
   font-size: 16px;
   line-height: 32px;
   color: var(--catalog-date-artist);
-  outline: none;
-  border: none;
+}
+
+.contacts__form-input:focus-visible {
+  background-color: #EAEAEA;
+}
+
+.contacts__form-input:hover {
+  background-color: #EAEAEA;
+}
+
+.contacts__form-input:active {
+  background-color: var(--white-color);
 }
 
 .contacts__form-btn {
@@ -2068,9 +2083,29 @@ ul {
   font-size: 18px;
   line-height: 25px;
   color: var(--violet-color);
+  background-color: transparent;
   padding: 6px 25px;
   border: 2px solid var(--violet-color);
   border-radius: 100px;
+  outline: 2px solid transparent;
+  transition: all .3s ease-in-out;
+}
+
+.contacts__form-btn:focus-visible {
+  outline: 2px solid var(--light-purple);
+  outline-offset: 3px;
+}
+
+.contacts__form-btn:hover {
+  background-color: var(--violet-color);
+  color: var(--white-color);
+}
+
+.contacts__form-btn:active {
+  outline: 3px solid var(--violet-ultra-light);
+  outline-offset: 0;
+  background-color: var(--violet-color);
+  color: var(--white-color);
 }
 
 .js-validate-error-label {
@@ -2088,6 +2123,25 @@ ul {
 
 .contacts__social-item:first-child {
   margin-right: 20px;
+}
+
+.contacts__social-item-link {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  transition: opacity .3s ease-in-out;
+  border-radius: 100%;
+  opacity: 1;
+}
+
+.contacts__social-item-link:focus-visible,
+.contacts__social-item-link:hover {
+  opacity: .5;
+}
+
+.contacts__social-item-link:active {
+  opacity: 1;
+  outline: 1px solid #9643A4;
 }
 
  /* map  */
@@ -2131,6 +2185,20 @@ ul {
 
 .footer__item:not(:last-child) {
   margin-right: 20px;
+}
+
+.social-icon {
+  color: var(--light-middle-gray);
+  transition: color .3s ease-in-out;
+}
+
+.footer__item-link:focus-visible .social-icon,
+.footer__item-link:hover .social-icon {
+  color: var(--white-color);
+}
+
+.footer__item-link:active .social-icon {
+  color: var(--violet-color);
 }
 
 /* button */
@@ -2185,6 +2253,8 @@ ul {
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
+
+
 
 
 

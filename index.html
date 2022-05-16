@@ -27,7 +27,7 @@
         </a>
 
         <nav class="header__nav">
-          <ul class="header__nav-list flex">
+          <ul class="header__nav-list flex" aria-label="Навигация по сайту">
             <li class="header__nav-item">
               <a class="header__nav-link background-place" href="#about">О&nbsp;нас</a>
             </li>
@@ -175,7 +175,7 @@
         </ul>
 
         <form class="header__form flex" action="/">
-          <button class="header__form-btn">
+          <button class="header__form-btn" aria-label="Поиск по сайту">
             <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
                 transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
@@ -214,8 +214,8 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about__content">
-        <h2 class="about__title">О&nbsp;нас</h2>
-        <p class="about__text">
+        <h2 class="about__title" tabindex="0" aria-label="Секция о нас">О&nbsp;нас</h2>
+        <p class="about__text" tabindex="0">
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
           участника как способного принимать собственные решения касаемо распределения внутренних резервов
           и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет
@@ -233,10 +233,10 @@
     <div class="container gallery__container">
       <div class="gallery__wrap">
         <div class="gallery__left-content">
-          <h2 class="gallery__title">Галерея</h2>
+          <h2 class="gallery__title" tabindex="0" aria-label="Секция галерея">Галерея</h2>
 
           <div class="gallery__select">
-            <h3 class="gallery__select-title">Фильтр:</h3>
+            <h3 class="gallery__select-title" tabindex="0" aria-label="Фильтр">Фильтр:</h3>
             <select class="gallery__select-choices choices" id="choices" name>
               <option value="">Живопись</option>
               <option>Рисунок</option>
@@ -309,8 +309,8 @@
 
   <section class="catalog" id="catalog">
     <div class="container">
-      <h2 class="catalog__title">Каталог</h2>
-      <p class="catalog__title-text">
+      <h2 class="catalog__title" tabindex="0" aria-label="Секция каталог">Каталог</h2>
+      <p class="catalog__title-text" tabindex="0">
         Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
         политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
         частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
@@ -840,7 +840,7 @@
 
   <section class="events" id="events">
     <div class="container">
-      <h2 class="events__title">События</h2>
+      <h2 class="events__title" tabindex="0" aria-label="Секция события">События</h2>
     </div>
     <div class="events__container">
       <div class="events__wrap events__swiper swiper">
@@ -939,8 +939,8 @@
 
   <section class="project" id="project">
     <div class="container">
-      <h2 class="project__title">Проекты</h2>
-      <p class="project__text">
+      <h2 class="project__title" tabindex="0" aria-label="Секция проекты">Проекты</h2>
+      <p class="project__text" tabindex="0">
         Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
         фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
         с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает
@@ -1038,7 +1038,7 @@
         <p class="contacts__address-text">Леонтьевский переулок, дом 5/1</p>
       </div>
 
-      <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+      <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" aria-label="Форма обратного звонка">
         <div class="contacts__form-wrap">
           <input class="contacts__form-input" data-validate-field="name" name="Имя" type="text" placeholder="Имя*">
         </div>
@@ -1052,7 +1052,7 @@
         <h4 class="contacts__social-title contacts__address-title">Связаться в&nbsp;один клик</h4>
         <ul class="contacts__social-list flex">
           <li class="contacts__social-item">
-            <a class="contacts__social-item-link" href="#">
+            <a class="contacts__social-item-link" href="#" aria-label="Написать в ватсап">
               <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
@@ -1064,7 +1064,7 @@
             </a>
           </li>
           <li class="contacts__social-item">
-            <a class="contacts__social-item-link" href="#">
+            <a class="contacts__social-item-link" href="#" aria-label="Написать в telegram">
               <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
@@ -1100,7 +1100,7 @@
       </a>
       <ul class="footer__list flex">
         <li class="footer__item">
-          <a class="footer__item-link" href="#">
+          <a class="footer__item-link" href="#" aria-label="Мы вконтакте">
             <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1110,7 +1110,7 @@
           </a>
         </li>
         <li class="footer__item">
-          <a class="footer__item-link" href="#">
+          <a class="footer__item-link" href="#" aria-label="Мы в instagram">
             <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1126,7 +1126,7 @@
           </a>
         </li>
         <li class="footer__item">
-          <a class="footer__item-link" href="#">
+          <a class="footer__item-link" href="#" aria-label="Мы в facebook">
             <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1292,7 +1292,7 @@
   </div>
 
   <div class="button">
-    <button class="button__to-top">
+    <button class="button__to-top" aria-label="В начало сайта">
       <svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M13,10.4142136 L13,17 L11,17 L11,10.4142136 L8.70710678,12.7071068 L7.29289322,11.2928932 L12,6.58578644 L16.7071068,11.2928932 L15.2928932,12.7071068 L13,10.4142136 Z"

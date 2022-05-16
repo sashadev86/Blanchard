@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
- 
+
   setMenuListener();
 
   // header-bottom-menu -- finish
@@ -281,6 +281,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
 
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+
     pagination: {
       el: '.events__swiper-pagination',
       type: 'bullets',
@@ -289,6 +295,12 @@ document.addEventListener("DOMContentLoaded", function () {
     navigation: {
       nextEl: '.events__swiper-btn--next',
       prevEl: '.events__swiper-btn--prev',
+    },
+
+    a11y: {
+      paginationBulletMessage: "Перейти на слайд {{index}}",
+      nextSlideMessage: "Следующий слайд",
+      prevSlideMessage: "Предыдущий слайд"
     },
   });
 
@@ -347,7 +359,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     a11y: {
       paginationBulletMessage: "Перейти на слайд {{index}}",
-      slideLabelMessage: "Слайд номер {{index}} из общего количества {{slidesLength}}"
+      nextSlideMessage: "Следующий слайд",
+      prevSlideMessage: "Предыдущий слайд"
     },
 
     navigation: {

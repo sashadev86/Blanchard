@@ -739,6 +739,7 @@ ul {
   font-size: 48px;
   line-height: 65px;
   color: var(--night-rider-color);
+  outline: none;
 }
 
 .about__text {
@@ -746,6 +747,7 @@ ul {
   font-size: 16px;
   line-height: 32px;
   color: var(--night-rider-color);
+  outline: none;
 }
 
 /* gallery */
@@ -778,6 +780,7 @@ ul {
   font-size: 48px;
   line-height: 65px;
   color: var(--white-color);
+  outline: none;
 }
 
 /* select */
@@ -792,6 +795,7 @@ ul {
   font-size: 16px;
   line-height: 32px;
   color: var(--white-color);
+  outline: none;
 }
 
 .header_choices:focus-visible {
@@ -1221,6 +1225,7 @@ ul {
   font-size: 48px;
   line-height: 65px;
   color: var(--night-rider-color);
+  outline: none;
 }
 
 .catalog__title-text {
@@ -1230,6 +1235,7 @@ ul {
   font-size: 16px;
   line-height: 32px;
   color: var(--night-rider-color);
+  outline: none;
 }
 
 .catalog__content {
@@ -1602,6 +1608,7 @@ ul {
   font-size: 48px;
   line-height: 65px;
   color: var(--night-rider-color);
+  outline: none;
 }
 
 .events__item {
@@ -1813,6 +1820,7 @@ ul {
   font-size: 48px;
   line-height: 65px;
   color: var(--night-rider-color);
+  outline: none;
 }
 
 .project__text {
@@ -1822,6 +1830,7 @@ ul {
   font-size: 16px;
   line-height: 32px;
   color: var(--night-rider-color);
+  outline: none;
 }
 
 /* tooltip section project */

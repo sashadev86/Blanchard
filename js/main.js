@@ -488,20 +488,21 @@ document.addEventListener("DOMContentLoaded", function () {
     animateScroll();
   }
 
-  // const initScrollToAnchor = () => {
-  //   const anchorLinks = document.querySelectorAll('.header__nav-link[data-scroll-to]');
-  //   if (anchorLinks.length) {
-  //     anchorLinks.forEach((link) => {
-  //       link.addEventListener('click', (e) => {
-  //         const currentBlock = link.getAttribute('href');
-  //         const blockTop = document.querySelector(currentBlock).offsetTop;
-  //         e.preventDefault();
-  //         scrollTo(blockTop, 400);
-  //       });
-  //     });
-  //   }
-  // };
-  // initScrollToAnchor();
+  const initScrollToAnchor = () => {
+    const anchorLinks = document.querySelectorAll('.header__nav-link, .hero__btn');
+    if (anchorLinks.length) {
+      anchorLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const currentBlock = link.getAttribute('href');
+          console.log(currentBlock);
+          const blockTop = document.querySelector(currentBlock).offsetTop;
+          e.preventDefault();
+          scrollTo(blockTop, 1000);
+        });
+      });
+    }
+  };
+  initScrollToAnchor();
 
 
   const initBtnToTop = () => {
@@ -522,7 +523,7 @@ document.addEventListener("DOMContentLoaded", function () {
       btnToTop.addEventListener('click', (e) => {
         e.preventDefault();
         // Вызываем функцию, первый аргумент - отступ, второй - скорость скролла, чем больше значение, тем медленнее скорость прокрутки
-        scrollTo(0, 400);
+        scrollTo(0, 1000);
       });
     }
   };

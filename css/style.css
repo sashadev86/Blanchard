@@ -40,7 +40,6 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -372,6 +371,13 @@ ul {
   z-index: 10;
 }
 
+.simplebar-mask:focus-visible,
+.simplebar-offset:focus-visible,
+.simplebar-content-wrapper:focus-visible,
+.simplebar-content:focus-visible {
+  outline: none;
+}
+
 .header__dropdown-wrap {
   width: 240px;
   max-height: 220px;
@@ -380,13 +386,13 @@ ul {
 .header__dropdown.is-active {
   display: block;
   animation-name: dropdownOpen;
-  animation-duration: .4s;
+  animation-duration: .3s;
 }
 
 .header__dropdown.is-disabled {
   display: block;
   animation-name: dropdownClose;
-  animation-duration: .4s;
+  animation-duration: .3s;
 }
 
 .header__dropdown-item {
@@ -660,6 +666,7 @@ ul {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+  background-color: var(--black-color);
 }
 
 .hero__slide-2 {
@@ -667,6 +674,7 @@ ul {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+  background-color: var(--black-color);
 }
 
 .hero__slide-3 {
@@ -674,6 +682,7 @@ ul {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+  background-color: var(--black-color);
 }
 
 .hero__content {
@@ -1456,7 +1465,7 @@ ul {
   margin-top: -1px;
   border-bottom: 1px solid transparent;
   max-height: 0;
-  transition: all 3s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .is-active .accordion__content {

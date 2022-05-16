@@ -75,7 +75,7 @@
             </button>
             <div class="header__dropdown js-header-drop" data-target="one">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list" tabindex="0">
+                <ul class="header__drop-list">
                   <li class="header__dropdown-item"><a class="header__item-link header__item-link--tintoretto"
                       href>Тинторрето</a></li>
                   <li class="header__dropdown-item"><a class="header__item-link header__item-link--fridrih"
@@ -206,7 +206,7 @@
         <h1 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
         <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий
           создаёт предпосылки для новых предложений.</p>
-        <button class="hero__btn">Подписаться на&nbsp;рассылку</button>
+        <a class="hero__btn" href="#contact">Подписаться на&nbsp;рассылку</a>
       </div>
     </div>
   </section>
@@ -214,7 +214,7 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about__content">
-        <h2 class="about__title" tabindex="0" aria-label="Секция о нас">О&nbsp;нас</h2>
+        <h2 class="about__title" aria-label="Секция о нас" tabindex="0">О&nbsp;нас</h2>
         <p class="about__text" tabindex="0">
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
           участника как способного принимать собственные решения касаемо распределения внутренних резервов
@@ -233,10 +233,10 @@
     <div class="container gallery__container">
       <div class="gallery__wrap">
         <div class="gallery__left-content">
-          <h2 class="gallery__title" tabindex="0" aria-label="Секция галерея">Галерея</h2>
+          <h2 class="gallery__title" aria-label="Секция галерея" tabindex="0">Галерея</h2>
 
           <div class="gallery__select">
-            <h3 class="gallery__select-title" tabindex="0" aria-label="Фильтр">Фильтр:</h3>
+            <h3 class="gallery__select-title" aria-label="Фильтр" tabindex="0">Фильтр:</h3>
             <select class="gallery__select-choices choices" id="choices" name>
               <option value="">Живопись</option>
               <option>Рисунок</option>
@@ -309,7 +309,7 @@
 
   <section class="catalog" id="catalog">
     <div class="container">
-      <h2 class="catalog__title" tabindex="0" aria-label="Секция каталог">Каталог</h2>
+      <h2 class="catalog__title" aria-label="Секция каталог" tabindex="0">Каталог</h2>
       <p class="catalog__title-text" tabindex="0">
         Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
         политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
@@ -840,7 +840,7 @@
 
   <section class="events" id="events">
     <div class="container">
-      <h2 class="events__title" tabindex="0" aria-label="Секция события">События</h2>
+      <h2 class="events__title" aria-label="Секция события" tabindex="0">События</h2>
     </div>
     <div class="events__container">
       <div class="events__wrap events__swiper swiper">
@@ -939,7 +939,7 @@
 
   <section class="project" id="project">
     <div class="container">
-      <h2 class="project__title" tabindex="0" aria-label="Секция проекты">Проекты</h2>
+      <h2 class="project__title" aria-label="Секция проекты" tabindex="0">Проекты</h2>
       <p class="project__text" tabindex="0">
         Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
         фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны
@@ -1038,7 +1038,8 @@
         <p class="contacts__address-text">Леонтьевский переулок, дом 5/1</p>
       </div>
 
-      <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" aria-label="Форма обратного звонка">
+      <form class="contacts__form" aria-label="Форма обратного звонка"
+        action="https://jsonplaceholder.typicode.com/posts" method="POST">
         <div class="contacts__form-wrap">
           <input class="contacts__form-input" data-validate-field="name" name="Имя" type="text" placeholder="Имя*">
         </div>

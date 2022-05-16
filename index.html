@@ -22,7 +22,7 @@
     <div class="header__top-menu">
       <div class="header__top container flex">
 
-        <a class="header__logo">
+        <a class="header__logo" tabindex="-1">
           <img src="img/header/logo.svg" alt="Логотип Blanchard">
         </a>
 
@@ -75,7 +75,7 @@
             </button>
             <div class="header__dropdown js-header-drop" data-target="one">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list">
+                <ul class="header__drop-list" tabindex="0">
                   <li class="header__dropdown-item"><a class="header__item-link header__item-link--tintoretto"
                       href>Тинторрето</a></li>
                   <li class="header__dropdown-item"><a class="header__item-link header__item-link--fridrih"
@@ -211,7 +211,7 @@
     </div>
   </section>
 
-  <section id="about" class="about">
+  <section class="about" id="about">
     <div class="container">
       <div class="about__content">
         <h2 class="about__title">О&nbsp;нас</h2>
@@ -220,7 +220,7 @@
           участника как способного принимать собственные решения касаемо распределения внутренних резервов
           и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет
           за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
-          высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого
+          высокое качество позиционных исследований создаёт необходимость включения&nbsp;в производственный план целого
           ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
           В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
           среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
@@ -229,7 +229,7 @@
     </div>
   </section>
 
-  <section id="gallery" class="gallery">
+  <section class="gallery" id="gallery">
     <div class="container gallery__container">
       <div class="gallery__wrap">
         <div class="gallery__left-content">
@@ -266,6 +266,7 @@
             <div class="gallery__pagination"></div>
             <button class="gallery__navigation-btn btn-next" aria-label="К следующему слайду"></button>
           </div>
+
           <div class="swiper-container slides-container">
             <div class="swiper-wrapper">
               <button class="gallery__slide swiper-slide" data-path="pic1">
@@ -275,7 +276,8 @@
               </button>
               <button class="gallery__slide swiper-slide" data-path="pic2">
                 <picture>
-                  <img class="gallery__image" src="img/gallery/2gallery1920.jpg" alt="Изображение картины 'Казимир Малевич 'Женщина с граблями''">
+                  <img class="gallery__image" src="img/gallery/2gallery1920.jpg"
+                    alt="Изображение картины 'Казимир Малевич 'Женщина с граблями''">
                 </picture>
               </button>
               <button class="gallery__slide swiper-slide" data-path="pic3">
@@ -305,7 +307,7 @@
     </div>
   </section>
 
-  <section id="catalog" class="catalog">
+  <section class="catalog" id="catalog">
     <div class="container">
       <h2 class="catalog__title">Каталог</h2>
       <p class="catalog__title-text">
@@ -419,11 +421,14 @@
           <h3 class="catalog__artist-title">Доменико Гирландайо</h3>
           <p class="catalog__artist-date">2 июня 1448 — 11 января 1494.</p>
           <p class="catalog__artist-text">
-            Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили
-            его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года
-            овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными
-            подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции
-            в костюмах того времени).
+            Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+            продолжили
+            его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение
+            года
+            овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными
+            подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане
+            Флоренции
+            в&nbsp;костюмах того времени).
           </p>
         </div>
 
@@ -833,7 +838,7 @@
     </div>
   </section>
 
-  <section id="events" class="events">
+  <section class="events" id="events">
     <div class="container">
       <h2 class="events__title">События</h2>
     </div>
@@ -849,7 +854,7 @@
               </figcaption>
             </figure>
             <div class="events__card">
-              <h3 class="events__card-title">Книжная гравюра в&nbsp;живом восприятии</h3>
+              <h3 class="events__card-title events__card-title-card1">Книжная гравюра в&nbsp;живом восприятии</h3>
               <p class="events__card-text">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
                 художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
               </p>
@@ -932,7 +937,7 @@
     </div>
   </section>
 
-  <section id="project" class="project">
+  <section class="project" id="project">
     <div class="container">
       <h2 class="project__title">Проекты</h2>
       <p class="project__text">
@@ -972,47 +977,47 @@
 
           <div class="project__swiper-wrap swiper-wrapper">
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/1project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/2project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/3project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/4project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/5project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/6project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/7project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/8project1920.png" alt="Логотип бренда">
               </a>
             </div>
             <div class="project__swiper-content swiper-slide">
-              <a href="#" class="project__swiper-content-link">
+              <a class="project__swiper-content-link" href="#">
                 <img class="project__swiper-img" src="img/project/9project1920.png" alt="Логотип бренда">
               </a>
             </div>
@@ -1026,10 +1031,10 @@
     </div>
   </section>
 
-  <section id="contact" class="contacts">
+  <section class="contacts" id="contact">
     <div class="container contacts__container flex">
       <div class="contacts__address">
-        <h3 class="contacts__address-title">Шоурум &#8470;&nbsp;4</h3>
+        <h3 class="contacts__address-title">Шоурум №4</h3>
         <p class="contacts__address-text">Леонтьевский переулок, дом 5/1</p>
       </div>
 
@@ -1090,13 +1095,14 @@
 
   <footer class="footer">
     <div class="container footer__container flex">
-      <a class="footer__logo">
+      <a class="footer__logo" tabindex="-1">
         <img src="img/footer/footerLogo.svg" alt="Логотип Blanchard">
       </a>
       <ul class="footer__list flex">
         <li class="footer__item">
           <a class="footer__item-link" href="#">
-            <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M22.5 0C10.074 0 0 10.0736 0 22.5C0 34.9264 10.074 45 22.5 45C34.926 45 45 34.9264 45 22.5C45 10.0736 34.926 0 22.5 0ZM33.9132 24.9335C34.9619 25.9577 36.0714 26.9217 37.0128 28.0519C37.4299 28.5519 37.823 29.0688 38.1222 29.6503C38.5495 30.4794 38.1637 31.3886 37.4216 31.4379L32.812 31.4369C31.6215 31.5354 30.6741 31.0553 29.8754 30.2414C29.2378 29.5927 28.6462 28.8999 28.0321 28.2292C27.7812 27.9539 27.517 27.6947 27.2021 27.4907C26.5737 27.0819 26.0277 27.2072 25.6677 27.8636C25.3008 28.5316 25.217 29.2719 25.182 30.0153C25.1319 31.1022 24.8041 31.3863 23.7135 31.4374C21.3832 31.5465 19.1721 31.1929 17.117 30.0181C15.3041 28.9818 13.901 27.5193 12.6783 25.8634C10.2973 22.6353 8.47381 19.0924 6.8354 15.4478C6.46665 14.627 6.73642 14.1878 7.64194 14.1707C9.14639 14.1417 10.6508 14.1454 12.1553 14.1694C12.7676 14.179 13.1727 14.5294 13.4079 15.1071C14.2209 17.1074 15.2176 19.0105 16.4665 20.7755C16.7994 21.2455 17.1391 21.7142 17.623 22.0461C18.157 22.4125 18.5639 22.2915 18.8158 21.6953C18.9769 21.3164 19.0464 20.9113 19.0814 20.5053C19.2011 19.1145 19.2153 17.7242 19.0082 16.339C18.8793 15.4722 18.3918 14.9124 17.5277 14.7485C17.0876 14.6652 17.152 14.5022 17.3661 14.2508C17.7376 13.8163 18.0856 13.5474 18.7812 13.5474L23.9893 13.5465C24.8101 13.7076 24.9942 14.0759 25.1056 14.9027L25.1102 20.6903C25.1006 21.0103 25.2709 21.9586 25.8454 22.1681C26.3058 22.32 26.6096 21.9508 26.8849 21.6594C28.1339 20.334 29.0237 18.7697 29.8206 17.1506C30.1723 16.4366 30.4757 15.6978 30.7703 14.9575C30.9895 14.4101 31.3301 14.1408 31.9479 14.15L36.9631 14.156C37.1108 14.156 37.2609 14.1574 37.4073 14.1827C38.2525 14.3273 38.4841 14.6909 38.2226 15.5154C37.811 16.8109 37.0114 17.89 36.2297 18.9718C35.3919 20.1301 34.4983 21.2478 33.6687 22.4111C32.9064 23.4746 32.9667 24.01 33.9132 24.9335Z"
                 fill="currentColor"></path>
@@ -1105,7 +1111,8 @@
         </li>
         <li class="footer__item">
           <a class="footer__item-link" href="#">
-            <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M18.1172 22.5C18.1172 24.8785 20.0453 26.8066 22.4238 26.8066C24.8024 26.8066 26.7305 24.8785 26.7305 22.5C26.7305 20.1215 24.8024 18.1934 22.4238 18.1934C20.0453 18.1934 18.1172 20.1215 18.1172 22.5Z"
                 fill="currentColor"></path>
@@ -1120,7 +1127,8 @@
         </li>
         <li class="footer__item">
           <a class="footer__item-link" href="#">
-            <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="social-icon" width="45" height="45" viewbox="0 0 45 45" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M22.5 0C10.125 0 0 10.1431 0 22.6355C0 33.9307 8.23499 43.3057 18.99 45V29.1867H13.275V22.6355H18.99V17.6431C18.99 11.9729 22.3425 8.85542 27.495 8.85542C29.9475 8.85542 32.5125 9.28464 32.5125 9.28464V14.8645H29.6775C26.8875 14.8645 26.01 16.6039 26.01 18.3886V22.6355H32.265L31.2525 29.1867H26.01V45C31.312 44.1593 36.1399 41.4432 39.6223 37.342C43.1047 33.2408 45.012 28.0248 44.9999 22.6355C44.9999 10.1431 34.875 0 22.5 0Z"
                 fill="currentColor"></path>
@@ -1139,8 +1147,11 @@
           <img src="img/gallery/1gallery1920.jpg" alt="Изображение картины">
           <button class="modal__info-close">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                fill="black"></path>
             </svg>
           </button>
           <div class="modal__info">
@@ -1148,7 +1159,9 @@
             <h4 class="modal__title-paint">Lorem ipsum, dolor</h4>
             <p class="modal__text-date">0000-9999</p>
             <p class="modal__text-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque commodi maxime dolores!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel
+              facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque
+              commodi maxime dolores!
             </p>
           </div>
         </div>
@@ -1159,16 +1172,21 @@
           <img src="img/gallery/modal2gallery1920.jpg" alt="Изображение картины 'Казимир Малевич 'Женщина с граблями''">
           <button class="modal__info-close">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"/>
-              </svg>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                fill="black"></path>
+            </svg>
           </button>
           <div class="modal__info">
             <h3 class="modal__title-author">Казимир Малевич</h3>
             <h4 class="modal__title-paint">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
             <p class="modal__text-date">1931-1932</p>
             <p class="modal__text-content">
-              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся
+              за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после
+              Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
             </p>
           </div>
         </div>
@@ -1179,8 +1197,11 @@
           <img src="img/gallery/3gallery1920.jpg" alt="Изображение картины">
           <div class="modal__info-close">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                fill="black"></path>
             </svg>
           </div>
           <div class="modal__info">
@@ -1188,7 +1209,9 @@
             <h4 class="modal__title-paint">Lorem ipsum, dolor</h4>
             <p class="modal__text-date">0000-9999</p>
             <p class="modal__text-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque commodi maxime dolores!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel
+              facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque
+              commodi maxime dolores!
             </p>
           </div>
         </div>
@@ -1198,8 +1221,11 @@
           <img src="img/gallery/4gallery1920.jpg" alt="Изображение картины">
           <div class="modal__info-close">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                fill="black"></path>
             </svg>
           </div>
           <div class="modal__info">
@@ -1207,7 +1233,9 @@
             <h4 class="modal__title-paint">Lorem ipsum, dolor</h4>
             <p class="modal__text-date">0000-9999</p>
             <p class="modal__text-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque commodi maxime dolores!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel
+              facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque
+              commodi maxime dolores!
             </p>
           </div>
         </div>
@@ -1217,8 +1245,11 @@
           <img src="img/gallery/5gallery1920.jpg" alt="Изображение картины">
           <div class="modal__info-close">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                fill="black"></path>
             </svg>
           </div>
           <div class="modal__info">
@@ -1226,7 +1257,9 @@
             <h4 class="modal__title-paint">Lorem ipsum, dolor</h4>
             <p class="modal__text-date">0000-9999</p>
             <p class="modal__text-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque commodi maxime dolores!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel
+              facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque
+              commodi maxime dolores!
             </p>
           </div>
         </div>
@@ -1236,8 +1269,11 @@
           <img src="img/gallery/6gallery1920.jpg" alt="Изображение картины">
           <div class="modal__info-close">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                fill="black"></path>
             </svg>
           </div>
           <div class="modal__info">
@@ -1245,7 +1281,9 @@
             <h4 class="modal__title-paint">Lorem ipsum, dolor</h4>
             <p class="modal__text-date">0000-9999</p>
             <p class="modal__text-content">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque commodi maxime dolores!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, asperiores, non adipisci qui vel
+              facere blanditiis fugit numquam esse facilis enim velit ab doloribus aspernatur consequatur doloremque
+              commodi maxime dolores!
             </p>
           </div>
         </div>
@@ -1256,7 +1294,10 @@
   <div class="button">
     <button class="button__to-top">
       <svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M13,10.4142136 L13,17 L11,17 L11,10.4142136 L8.70710678,12.7071068 L7.29289322,11.2928932 L12,6.58578644 L16.7071068,11.2928932 L15.2928932,12.7071068 L13,10.4142136 Z" fill-rule="evenodd"/></svg>
+        <path
+          d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,21 C16.9705627,21 21,16.9705627 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,16.9705627 7.02943725,21 12,21 Z M13,10.4142136 L13,17 L11,17 L11,10.4142136 L8.70710678,12.7071068 L7.29289322,11.2928932 L12,6.58578644 L16.7071068,11.2928932 L15.2928932,12.7071068 L13,10.4142136 Z"
+          fill-rule="evenodd"></path>
+      </svg>
     </button>
   </div>
 

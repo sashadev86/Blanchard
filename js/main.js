@@ -51,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // header-bottom-menu -- finish
 
+
+
   // slider-hero start
 
   const swiper = new Swiper('.hero__swiper', {
@@ -64,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // slider-hero finish
+
+
 
   // select start
 
@@ -79,6 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // select finish
+
+
 
   // sliderGallery start
 
@@ -145,6 +151,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // sliderGallery finish
+
+
 
   // modalsGallery start
 
@@ -225,6 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // modalsGallery finish
 
 
+
   // accordion start
 
   (() => {
@@ -234,6 +243,8 @@ document.addEventListener("DOMContentLoaded", function () {
   })();
 
   // accordion finish
+
+
 
   // tabs start
 
@@ -255,6 +266,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // tabs finish
+
+
 
   // sliderEvents start
 
@@ -304,8 +317,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-
   // sliderEvents finish
+
+
 
   // tippy start
 
@@ -324,6 +338,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // tippy finish
+
+
 
   // sliderProject start
 
@@ -371,45 +387,78 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // sliderProject finish
 
-  // validateContacts start
 
-  new JustValidate('.contacts__form', {
-    rules: {
-      name: {
-        required: true,
-        minLength: 2,
-        maxLength: 30
-      },
-      tel: {
-        required: true,
-        function: (name, value) => {
-          const phone = selector.inputmask.unmaskedvalue();
-          return Number(phone) && phone.length === 10;
-        }
-      }
+
+  // validateContacts and inputmask + отправка на почту start
+
+  const form = document.querySelector('.contacts__form');
+  const telSelector = form.querySelector('input[type="tel"]');
+  const inputMask = new Inputmask('+7 (999) 999-99-99');
+  inputMask.mask(telSelector);
+
+  const validation = new JustValidate('.contacts__form', {
+    errorLabelStyle: {
+      color: '#D11616',
     },
-
-    colorWrong: '#D11616',
-
-    messages: {
-      name: "Как вас зовут?",
-      tel: {
-        required: "Укажите ваш телефон",
-        function: "Не достаточно количество символов"
-      }
-    }
   });
 
-  // validateContacts finish
+  validation
+    .addField('.input-name', [
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Имя слишком короткое',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Максимальное количество символов 30',
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Как вас зовут?',
+      },
+    ])
+    .addField('.input-tel', [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Укажите ваш телефон',
+      },
+      {
+        rule: 'function',
+        validator: function () {
+          const phone = telSelector.inputmask.unmaskedvalue();
+          return phone.length === 10;
+        },
+        errorMessage: 'Не достаточно количество символов',
+      },
+    ]).onSuccess((event) => {
+      // console.log('Validation passes and form submitted', event);
 
-  // inputmask start
+      let formData = new FormData(event.target);
+      // console.log(...formData);
 
-  var inputTel = document.querySelector("input[type='tel']");
-  var im = new Inputmask("+7 (999)-999-99-99");
+      let xhr = new XMLHttpRequest();
 
-  im.mask(inputTel);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
+          }
+        }
+      }
 
-  // inputmask finish
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      event.target.reset();
+    });
+
+  // validateContacts and inputmask + отправка на почту finish
+
+
 
   // myMap start
 
@@ -452,6 +501,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // myMap finish
+
 
   // smooth scroll start
 
@@ -497,7 +547,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log(currentBlock);
           const blockTop = document.querySelector(currentBlock).offsetTop;
           e.preventDefault();
-          scrollTo(blockTop, 1000);
+          scrollTo(blockTop, 1200);
         });
       });
     }

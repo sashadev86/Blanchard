@@ -175,7 +175,7 @@
         </ul>
 
         <form class="header__form flex" action="/">
-          <button class="header__form-btn" aria-label="Поиск по сайту">
+          <button type="submit" class="header__form-btn" aria-label="Поиск по сайту">
             <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
                 transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
@@ -1038,14 +1038,14 @@
         <p class="contacts__address-text">Леонтьевский переулок, дом 5/1</p>
       </div>
 
-      <form class="contacts__form" aria-label="Форма обратного звонка"
-        action="https://jsonplaceholder.typicode.com/posts" method="POST">
+      <form class="contacts__form" action="#" method="POST" enctype="multipart/form-data">
         <div class="contacts__form-wrap">
-          <input class="contacts__form-input" data-validate-field="name" name="Имя" type="text" placeholder="Имя*">
+          <input class="contacts__form-input input-name" name="Имя" type="text" placeholder="Имя*">
         </div>
         <div class="contacts__form-wrap">
-          <input class="contacts__form-input" data-validate-field="tel" name="tel" type="tel" placeholder="Телефон*">
+          <input class="contacts__form-input input-tel" name="tel" type="tel" placeholder="Телефон*">
         </div>
+        <!-- <input class="input" type="file" name="file[]" multiple id="myfile"> -->
         <button class="contacts__form-btn">Заказать обратный звонок</button>
       </form>
 

@@ -371,10 +371,7 @@ ul {
   z-index: 10;
 }
 
-.simplebar-mask:focus-visible,
-.simplebar-offset:focus-visible,
-.simplebar-content-wrapper:focus-visible,
-.simplebar-content:focus-visible {
+.simplebar-content-wrapper:focus-visible {
   outline: none;
 }
 
@@ -2118,6 +2115,18 @@ ul {
 .contacts__form-wrap {
   position: relative;
   display: flex;
+  flex-direction: column-reverse;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -40%;
+  left: 7%;
+  width: max-content;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
 }
 
 .contacts__form-input {
@@ -2182,15 +2191,6 @@ ul {
   outline-offset: 0;
   background-color: var(--amethyst-color);
   color: var(--white-color);
-}
-
-.js-validate-error-label {
-  position: absolute;
-  top: -40%;
-  left: 7%;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
 }
 
 .contacts__social-title {

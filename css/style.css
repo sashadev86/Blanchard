@@ -12,7 +12,7 @@
   font-family: "OpenSansItalic";
   src: url("OpenSansItalic"),
     url("../fonts/OpenSansItalic.woff2") format('woff2'),
-    url("../fonts/OpenSansSemiBold.woff") format('woff');
+    url("../fonts/OpenSansItalic.woff") format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -51,7 +51,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans';
 }
 
 a {
@@ -83,6 +83,10 @@ button {
   background-color: transparent;
   cursor: pointer;
   border: 0;
+  outline: none;
+}
+
+button:focus-visible, [type="button"]:focus-visible, [type="reset"]:focus-visible, [type="submit"]:focus-visible {
   outline: none;
 }
 
@@ -1009,7 +1013,7 @@ ul {
   background-color: var(--white-02-color);
 }
 
-.choices .choices__list.choices__list--dropdown .choices__placeholder {
+.choices .choices__list .choices__item.is-selected {
   display: none;
 }
 
@@ -1450,6 +1454,7 @@ ul {
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 
 .modal__info-close svg {
@@ -1941,7 +1946,11 @@ ul {
 
 .events__item {
   max-width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--very-light-grey-color);
+
 }
 
 .events__picture {
@@ -1975,6 +1984,7 @@ ul {
       -ms-flex-align: start;
           align-items: flex-start;
   min-height: 303px;
+  flex: 1;
 }
 
 .events__card-title {
@@ -2013,19 +2023,21 @@ ul {
 .events__cards-link::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -7px;
   top: -5px;
   bottom: -5px;
-  width: 100%;
+  width: calc(100% + 14px);
   background-color: var(--amethyst-color);
+  z-index: -1;
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
   -webkit-transform: translate(0%, 0%) scaleX(0);
       -ms-transform: translate(0%, 0%) scaleX(0);
           transform: translate(0%, 0%) scaleX(0);
-  z-index: -1;
+  -o-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 .events__cards-link:focus-visible:not(:hover):not(:active)::before {

@@ -581,4 +581,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // smooth scroll finish
 
+//   const btnSearch = document.querySelector('.header__form-btn');
+
+//   btnSearch.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     findByText();
+//   });
+
+
+//   function findByText() {
+//     console.log(1);
+//     // window.scrollBy(0, document.evaluate("//*[text()[contains(., 'Один из ведущих флорентийских')]][last()]", document.body).iterateNext().getBoundingClientRect().top);
+
+
+
+//     let xpath = "//p[contains(text(),'Один из ведущих')]";;
+//     // // let matchingElement = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+//     // let headings = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+
+//     // console.log(headings);
+
+//     // ✅ Get specific `p` element
+// const firstP = document.evaluate(
+//   xpath,
+//   document,
+//   null,
+//   XPathResult.FIRST_ORDERED_NODE_TYPE,
+//   null,
+// ).singleNodeValue;
+
+// console.log(firstP); // 👉️ p
+// console.log(firstP.textContent); // 👉️ "Apple, Banana, Kiwi"
+//   }
+
+
 });

@@ -2186,44 +2186,31 @@ ul {
 
 /* tooltip section project */
 
-.project__text-tippy-wrap {
+.project__text-tooltip {
   cursor: pointer;
   width: 16px;
   height: 16px;
   display: inline-block;
 }
 
-.project__text-tippy-wrap-tooltip {
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  border: 1px solid var(--amethyst-color);
-  color: var(--black-color);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  outline: none;
-  -webkit-transition: background-color .3s ease-in-out;
-  -o-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+.project__text-tooltip svg,
+.project__text-tooltip svg path {
+  transition: fill .3s ease-in-out;
 }
 
-.project__text-tippy-wrap-tooltip:focus-visible,
-.project__text-tippy-wrap-tooltip:hover {
-  background-color: var(--mauve-color);
+.project__text-tooltip:focus-visible svg,
+.project__text-tooltip:hover svg {
+  fill: var(--mauve-color);
   -webkit-filter: drop-shadow(0px 4px 4px var(--black-025-color));
           filter: drop-shadow(0px 4px 4px var(--black-025-color));
 }
 
-.project__text-tippy-wrap-tooltip:active {
-  background-color: var(--amethyst-color);
-  color: var(--white-color);
+.project__text-tooltip:active svg {
+  fill: var(--amethyst-color);
+}
+
+.project__text-tooltip:active path.svg-tooltip {
+  fill: var(--white-color);
 }
 
 .tooltip__hint {

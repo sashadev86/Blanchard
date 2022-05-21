@@ -2584,7 +2584,7 @@ ul {
 /* contacts */
 
 .contacts {
-  border: 1px solid var(--very-light-grey-color);
+  border-top: 1px solid var(--very-light-grey-color);
 }
 
 .contacts__container {
@@ -2772,6 +2772,7 @@ ul {
 /* map  */
 
 .map {
+  border-top: 1px solid var(--very-light-grey-color);
   overflow-x: hidden;
 }
 

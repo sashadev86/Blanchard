@@ -86,6 +86,19 @@ ul {
   list-style: none;
 }
 
+.title-all {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.text-all {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--night-rider-color);
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,7 +200,27 @@ ul {
   width: 100%;
 }
 
+/* search */
+
+.text-highlight {
+  animation: fadeInHigtlight 4s ease-out;
+}
+
+@keyframes fadeInHigtlight {
+  0% {
+    background-color: rgba(252, 186, 3, 1);
+  }
+
+  100% {
+    background-color: rgba(252, 186, 3, 0);
+  }
+}
+
 /* header */
+
+.header {
+  position: relative;
+}
 
 /* header__top */
 
@@ -196,8 +229,7 @@ ul {
 }
 
 .header__top {
-  padding-top: 26px;
-  padding-bottom: 27.5px;
+  padding: 26px 41px 27px 58px;
 }
 
 .header__logo {
@@ -377,7 +409,7 @@ ul {
 
 /* header modal enter */
 
-.modal__enter {
+.modal-enter {
   position: relative;
   width: 500px;
   height: 450px;
@@ -440,8 +472,8 @@ ul {
   flex: 0 0 100px;
 }
 
-.input__enter-name,
-.input__enter-password {
+.modal__enter-input-name,
+.modal__enter-input-password {
   outline: none;
   padding: 10px 0px 10px 10px;
   border-radius: 100px;
@@ -449,22 +481,22 @@ ul {
   flex: 1;
 }
 
-.input__enter-name::placeholder,
-.input__enter-password::placeholder {
+.modal__enter-input-name::placeholder,
+.modal__enter-input-password::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
 }
 
-.input__enter-name::-webkit-input-placeholder,
-.input__enter-password::-webkit-input-placeholder {
+.modal__enter-input-name::-webkit-input-placeholder,
+.modal__enter-input-password::-webkit-input-placeholder {
   opacity: 1;
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
 }
 
-.input__enter-name:focus-visible::-webkit-input-placeholder,
-.input__enter-password:focus-visible::-webkit-input-placeholder {
+.modal__enter-input-name:focus-visible::-webkit-input-placeholder,
+.modal__enter-input-password:focus-visible::-webkit-input-placeholder {
   opacity: 0;
   -webkit-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
@@ -501,8 +533,6 @@ ul {
   color: var(--white-color);
 }
 
-
-
 /* header__bottom */
 
 .header__bottom-menu {
@@ -518,7 +548,7 @@ ul {
 }
 
 .header__list {
-  margin-right: auto;
+  margin-right: 19.7%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -532,7 +562,7 @@ ul {
 }
 
 .header__item:not(:last-child) {
-  margin-right: 94px;
+  margin-right: 91px;
 }
 
 .header__item-btn {
@@ -542,7 +572,7 @@ ul {
       -ms-flex-align: baseline;
           align-items: baseline;
   outline: none;
-  padding-left: 4px;
+  padding-left: 6px;
   border: none;
   background-color: transparent;
   font-style: normal;
@@ -1045,7 +1075,7 @@ ul {
 }
 
 .hero__title {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   font-weight: 700;
   font-size: 72px;
   line-height: 82px;
@@ -1094,24 +1124,12 @@ ul {
 
 .about__content {
   max-width: 1087px;
-  padding: 83px 0 69.5px 0;
+  padding: 80px 0 69.5px 8px;
 }
 
 .about__title {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 65px;
   color: var(--night-rider-color);
-  outline: none;
-}
-
-.about__text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
-  outline: none;
 }
 
 /* gallery */
@@ -1150,11 +1168,7 @@ ul {
 
 .gallery__title {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 65px;
   color: var(--white-color);
-  outline: none;
 }
 
 /* select */
@@ -1166,10 +1180,7 @@ ul {
 .gallery__select-title {
   margin-bottom: 10px;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 32px;
   color: var(--white-color);
-  outline: none;
 }
 
 .header_choices:focus-visible {
@@ -1298,9 +1309,6 @@ ul {
   -webkit-transition: color .2s ease-in-out;
   -o-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
   color: var(--white-color);
 }
 
@@ -1563,24 +1571,12 @@ ul {
   color: var(--nobel-color);
 }
 
-.modal__text-content {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
-}
-
 .modal__info-close {
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
 }
-
-/* .modal__info-close svg {
-  pointer-events: none;
-} */
-
 
 /* catalog */
 
@@ -1591,21 +1587,12 @@ ul {
 
 .catalog__title {
   margin-bottom: 18px;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 65px;
   color: var(--night-rider-color);
-  outline: none;
 }
 
 .catalog__title-text {
   margin-bottom: 38px;
   max-width: 1080px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
-  outline: none;
 }
 
 .catalog__content {
@@ -1725,10 +1712,6 @@ ul {
 
 .catalog__artist-text {
   max-width: 749px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
 }
 
 /* accordion section catalog */
@@ -1896,10 +1879,6 @@ ul {
 }
 
 .accordion__painter-btn-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
   -webkit-transition: color .3s ease-in-out;
   -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
@@ -2057,11 +2036,7 @@ ul {
 
 .events__title {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 65px;
   color: var(--night-rider-color);
-  outline: none;
 }
 
 .events__item {
@@ -2121,10 +2096,6 @@ ul {
 
 .events__card-text {
   margin-bottom: auto;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
 }
 
 .events__cards-link {
@@ -2297,21 +2268,12 @@ ul {
 
 .project__title {
   margin-bottom: 15px;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 65px;
   color: var(--night-rider-color);
-  outline: none;
 }
 
 .project__text {
   max-width: 1080px;
   margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
-  outline: none;
 }
 
 /* tooltip section project */
@@ -2606,13 +2568,6 @@ ul {
   color: var(--night-rider-color);
 }
 
-.contacts__address-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
-}
-
 .contacts__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2645,10 +2600,6 @@ ul {
 }
 
 .contacts__form-input {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
-  color: var(--night-rider-color);
   padding: 9px 24px;
   width: 270px;
   margin-right: 21px;

@@ -580,4 +580,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // smooth scroll finish
 
+  // search start
+
+  const searchBtn = document.querySelector('.header__form-btn');
+
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    search()
+  });
+
+  const search = function() {
+    const searchValue = document.querySelector(".header__form-input").value;
+
+    const targetElement = document.evaluate(`//*[text()[contains(., '${searchValue}')]][last()]`, document.body).iterateNext()
+
+    targetElement.classList.add('text-highlight')
+
+    setTimeout(() => {
+      targetElement.classList.remove('text-highlight')
+    }, 4000);
+
+    const targetPosition = targetElement.getBoundingClientRect().top;
+
+    scrollTo(targetPosition);
+  }
+
+  // search finish
 });
+

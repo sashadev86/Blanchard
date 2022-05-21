@@ -50,7 +50,7 @@
         </nav>
 
         <div class="header__enter-wrap">
-          <a class="header__enter" href="#">
+          <button class="header__enter modal-call" href="#" data-path="enter">
             <span class="header__enter-img">
               <svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -59,7 +59,7 @@
               </svg>
             </span>
             <span class="header__enter-text">Войти</span>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -243,10 +243,10 @@
     <div class="container gallery__container">
       <div class="gallery__wrap">
         <div class="gallery__left-content">
-          <h2 class="gallery__title" aria-label="Секция галерея" tabindex="0">Галерея</h2>
+          <h2 class="gallery__title">Галерея</h2>
 
           <div class="gallery__select">
-            <h3 class="gallery__select-title" aria-label="Фильтр" tabindex="0">Фильтр:</h3>
+            <h3 class="gallery__select-title">Фильтр:</h3>
             <select class="gallery__select-choices choices" id="choices" name>
               <option value="">Живопись</option>
               <option>Рисунок</option>
@@ -254,18 +254,18 @@
             </select>
           </div>
 
-          <div class="gallery_checkbox">
-            <label class="check__label">
-              <input class="check__input" type="checkbox">
-              <span class="check__text">XIX век</span>
+          <div class="gallery__checkbox">
+            <label class="gallery__checkbox-label">
+              <input class="gallery__checkbox-input" type="checkbox">
+              <span class="gallery__checkbox-text">XIX век</span>
             </label>
-            <label class="check__label">
-              <input class="check__input" type="checkbox">
-              <span class="check__text">XX век</span>
+            <label class="gallery__checkbox-label">
+              <input class="gallery__checkbox-input" type="checkbox">
+              <span class="gallery__checkbox-text">XX век</span>
             </label>
-            <label class="check__label">
-              <input class="check__input" type="checkbox">
-              <span class="check__text">Современность</span>
+            <label class="gallery__checkbox-label">
+              <input class="gallery__checkbox-input" type="checkbox">
+              <span class="gallery__checkbox-text">Современность</span>
             </label>
           </div>
         </div>
@@ -279,33 +279,33 @@
 
           <div class="swiper-container slides-container">
             <div class="swiper-wrapper">
-              <button class="gallery__slide swiper-slide" data-path="pic1">
+              <button class="gallery__slide modal-call swiper-slide" data-path="pic1">
                 <picture>
                   <img class="gallery__image" src="img/gallery/1gallery1920.jpg" alt="Изображение картины">
                 </picture>
               </button>
-              <button class="gallery__slide swiper-slide" data-path="pic2">
+              <button class="gallery__slide modal-call swiper-slide" data-path="pic2">
                 <picture>
                   <img class="gallery__image" src="img/gallery/2gallery1920.jpg"
                     alt="Изображение картины 'Казимир Малевич 'Женщина с граблями''">
                 </picture>
               </button>
-              <button class="gallery__slide swiper-slide" data-path="pic3">
+              <button class="gallery__slide modal-call swiper-slide" data-path="pic3">
                 <picture>
                   <img class="gallery__image" src="img/gallery/3gallery1920.jpg" alt="Изображение картины">
                 </picture>
               </button>
-              <button class="gallery__slide swiper-slide" data-path="pic4">
+              <button class="gallery__slide modal-call swiper-slide" data-path="pic4">
                 <picture>
                   <img class="gallery__image" src="img/gallery/4gallery1920.jpg" alt="Изображение картины">
                 </picture>
               </button>
-              <button class="gallery__slide swiper-slide" data-path="pic5">
+              <button class="gallery__slide modal-call swiper-slide" data-path="pic5">
                 <picture>
                   <img class="gallery__image" src="img/gallery/5gallery1920.jpg" alt="Изображение картины">
                 </picture>
               </button>
-              <button class="gallery__slide swiper-slide" data-path="pic6">
+              <button class="gallery__slide modal-call swiper-slide" data-path="pic6">
                 <picture>
                   <img class="gallery__image" src="img/gallery/6gallery1920.jpg" alt="Изображение картины">
                 </picture>
@@ -333,7 +333,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="ambrojo">
@@ -342,7 +342,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="franchesko">
@@ -351,7 +351,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="jovanni">
@@ -360,7 +360,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="bonsiori">
@@ -369,7 +369,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="rafaelo">
@@ -378,7 +378,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="bramantino">
@@ -387,7 +387,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="brea">
@@ -396,7 +396,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="tuchi">
@@ -405,7 +405,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="viekketta">
@@ -414,7 +414,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="andrea">
@@ -423,7 +423,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content tab-content-active" data-target="domeniko">
@@ -448,7 +448,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="granachi">
@@ -457,7 +457,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="chekko">
@@ -466,7 +466,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="udine">
@@ -475,7 +475,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="paolo">
@@ -484,7 +484,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="djordjone">
@@ -493,7 +493,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="parentino">
@@ -502,7 +502,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="pezellino">
@@ -511,7 +511,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="perudjino">
@@ -520,7 +520,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="baldassare">
@@ -529,7 +529,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="pizanello">
@@ -538,7 +538,7 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
         <div class="catalog__artist tab-content" data-target="pinturiqo">
@@ -547,10 +547,10 @@
           <p class="catalog__artist-text">
             Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
           </p>
-          <a class="catalog__artist-link" href="#">В галерею</a>
+          <a class="catalog__artist-link" href="#gallery">В галерею</a>
         </div>
 
-        <div class="catalog__accordion">
+        <div class="accordion">
           <ul class="accordion__list js-accordion-container">
             <li class="accordion__item ac js-enabled is-active">
               <button class="accordion__heading ac-trigger">
@@ -712,7 +712,7 @@
                   <div class="accordion__content-info flex">
                     <h3 class="accordion__content-title">Здесь пока пусто</h3>
                     <p class="accordion__content-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a class="accordion__content-link catalog__artist-link" href="#">В галерею</a>
+                    <a class="accordion__content-link catalog__artist-link" href="#gallery">В галерею</a>
                   </div>
                 </div>
               </div>
@@ -737,7 +737,7 @@
                   <div class="accordion__content-info flex">
                     <h3 class="accordion__content-title">Здесь пока пусто</h3>
                     <p class="accordion__content-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a class="accordion__content-link catalog__artist-link" href="#">В галерею</a>
+                    <a class="accordion__content-link catalog__artist-link" href="#gallery">В галерею</a>
                   </div>
                 </div>
               </div>
@@ -762,7 +762,7 @@
                   <div class="accordion__content-info flex">
                     <h3 class="accordion__content-title">Здесь пока пусто</h3>
                     <p class="accordion__content-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a class="accordion__content-link catalog__artist-link" href="#">В галерею</a>
+                    <a class="accordion__content-link catalog__artist-link" href="#gallery">В галерею</a>
                   </div>
                 </div>
               </div>
@@ -787,7 +787,7 @@
                   <div class="accordion__content-info flex">
                     <h3 class="accordion__content-title">Здесь пока пусто</h3>
                     <p class="accordion__content-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a class="accordion__content-link catalog__artist-link" href="#">В галерею</a>
+                    <a class="accordion__content-link catalog__artist-link" href="#gallery">В галерею</a>
                   </div>
                 </div>
               </div>
@@ -812,7 +812,7 @@
                   <div class="accordion__content-info flex">
                     <h3 class="accordion__content-title">Здесь пока пусто</h3>
                     <p class="accordion__content-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a class="accordion__content-link catalog__artist-link" href="#">В галерею</a>
+                    <a class="accordion__content-link catalog__artist-link" href="#gallery">В галерею</a>
                   </div>
                 </div>
               </div>
@@ -837,7 +837,7 @@
                   <div class="accordion__content-info flex">
                     <h3 class="accordion__content-title">Здесь пока пусто</h3>
                     <p class="accordion__content-text">А в галерее вы всегда можете найти что-то интересное для себя</p>
-                    <a class="accordion__content-link catalog__artist-link" href="#">В галерею</a>
+                    <a class="accordion__content-link catalog__artist-link" href="#gallery">В галерею</a>
                   </div>
                 </div>
               </div>
@@ -976,7 +976,7 @@
         с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее:
         <a class="project__text-link" href="#">blanchard-art.ru/projects</a>
       </p>
-      <div class="tooltip__hint">
+      <div class="project__tooltip-hidden">
         <div id="one">
           <strong>Пример современных тенденций&nbsp;&mdash; современная методология разработки</strong>
         </div>
@@ -1064,7 +1064,6 @@
         <div class="contacts__form-wrap">
           <input class="contacts__form-input input-tel" name="tel" type="tel" placeholder="Телефон*">
         </div>
-        <!-- <input class="input" type="file" name="file[]" multiple id="myfile"> -->
         <button class="contacts__form-btn">Заказать обратный звонок</button>
       </form>
 
@@ -1108,8 +1107,8 @@
   </section>
 
   <section class="map">
-    <div class="contacts__map">
-      <div class="contacts__map-wrap" id="myMap"></div>
+    <div class="map__content">
+      <div class="map__content-wrap" id="myMap"></div>
     </div>
   </section>
 
@@ -1162,10 +1161,37 @@
   <div class="modals fix-block">
     <div class="modal-overlay">
 
+      <div class="modal modal__enter" data-target="enter">
+        <div class="modal__enter-content flex">
+          <img src="img/header/logo.svg" alt="Логотип">
+          <button class="modal__enter-close modal-close-btn">
+            <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                fill="black"></path>
+            </svg>
+          </button>
+            <form action="#" class="modal__enter-form">
+              <label class="modal__enter-label">
+                <span class="modal__enter-text">Логин:</span>
+                <input type="text" name="Имя" class="input__enter-name" placeholder="Введите логин" required>
+              </label>
+              <label class="modal__enter-label">
+                <span class="modal__enter-text">Пароль:</span>
+                <input type="password" class="input__enter-password" placeholder="Введите пароль" required>
+              </label>
+              <button class="modal__enter-btn">Войти</button>
+              <button class="modal__enter-btn">Регистрация</button>
+            </form>
+        </div>
+      </div>
+
       <div class="modal modal--1" data-target="pic1">
         <div class="modal__content flex">
           <img src="img/gallery/1gallery1920.jpg" alt="Изображение картины">
-          <button class="modal__info-close">
+          <button class="modal__info-close modal-close-btn">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
@@ -1190,7 +1216,7 @@
       <div class="modal modal--2" data-target="pic2">
         <div class="modal__content flex">
           <img src="img/gallery/modal2gallery1920.jpg" alt="Изображение картины 'Казимир Малевич 'Женщина с граблями''">
-          <button class="modal__info-close">
+          <button class="modal__info-close modal-close-btn">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
@@ -1215,7 +1241,7 @@
       <div class="modal modal--3" data-target="pic3">
         <div class="modal__content flex">
           <img src="img/gallery/3gallery1920.jpg" alt="Изображение картины">
-          <div class="modal__info-close">
+          <div class="modal__info-close modal-close-btn">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
@@ -1239,7 +1265,7 @@
       <div class="modal modal--4" data-target="pic4">
         <div class="modal__content flex">
           <img src="img/gallery/4gallery1920.jpg" alt="Изображение картины">
-          <div class="modal__info-close">
+          <div class="modal__info-close modal-close-btn">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
@@ -1263,7 +1289,7 @@
       <div class="modal modal--5" data-target="pic5">
         <div class="modal__content flex">
           <img src="img/gallery/5gallery1920.jpg" alt="Изображение картины">
-          <div class="modal__info-close">
+          <div class="modal__info-close modal-close-btn">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
@@ -1287,7 +1313,7 @@
       <div class="modal modal--6" data-target="pic6">
         <div class="modal__content flex">
           <img src="img/gallery/6gallery1920.jpg" alt="Изображение картины">
-          <div class="modal__info-close">
+          <div class="modal__info-close modal-close-btn">
             <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>

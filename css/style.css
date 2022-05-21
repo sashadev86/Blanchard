@@ -123,6 +123,70 @@ ul {
   margin: 0 auto;
 }
 
+/* modal */
+
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: 10;
+}
+
+.modal {
+  position: relative;
+  background-color: var(--white-color);
+  width: 900px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.modal-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.modal--visible {
+  display: block;
+}
+
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
 /* header */
 
 /* header__top */
@@ -310,6 +374,134 @@ ul {
   transition: color .3s ease-in-out;
   z-index: 1;
 }
+
+/* header modal enter */
+
+.modal__enter {
+  position: relative;
+  width: 500px;
+  height: 450px;
+  padding: 40px 50px;
+  border-radius: 5%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__enter-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__enter-content img {
+  margin-bottom: 30px;
+  width: 300px;
+  filter: drop-shadow(0px 5px 5px rgba(255, 255, 255, 0.4));
+}
+
+.modal__enter-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.modal__enter-close svg path {
+  fill: var(--white-color);
+  transition: fill .3s ease-in-out;
+}
+
+.modal__enter-close:focus-visible svg path,
+.modal__enter-close:hover svg path {
+  fill: var(--wisteria-color);
+}
+
+.modal__enter-close:active svg path {
+  fill: var(--studio-color);
+}
+
+.modal__enter-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__enter-label {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal__enter-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--white-color);
+  flex: 0 0 100px;
+}
+
+.input__enter-name,
+.input__enter-password {
+  outline: none;
+  padding: 10px 0px 10px 10px;
+  border-radius: 100px;
+  background-color: var(--whisper-color);
+  flex: 1;
+}
+
+.input__enter-name::placeholder,
+.input__enter-password::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.input__enter-name::-webkit-input-placeholder,
+.input__enter-password::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.input__enter-name:focus-visible::-webkit-input-placeholder,
+.input__enter-password:focus-visible::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
+.modal__enter-btn {
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background-color: var(--white-color);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--night-rider-color);
+  outline: none;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.modal__enter-btn:focus-visible:not(:hover):not(:active) {
+  outline: 2px solid var(--amethyst-color);
+  outline-offset: 3px;
+  background-color: var(--amethyst-color);
+  color: var(--white-color);
+}
+
+.modal__enter-btn:hover {
+  outline: 2px solid var(--vivid-violet-color);
+  background-color: var(--mauve-color);
+}
+
+.modal__enter-btn:active {
+  outline: none;
+  background-color: var(--studio-color);
+  color: var(--white-color);
+}
+
+
 
 /* header__bottom */
 
@@ -1076,7 +1268,7 @@ ul {
 
 /* checkbox */
 
-.gallery_checkbox {
+.gallery__checkbox {
   max-width: 147px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1087,7 +1279,7 @@ ul {
           flex-direction: column;
 }
 
-.check__input {
+.gallery__checkbox-input {
   position: absolute;
   padding: 0;
   border: 0;
@@ -1099,7 +1291,7 @@ ul {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.check__text {
+.gallery__checkbox-text {
   position: relative;
   padding-left: 24px;
   cursor: pointer;
@@ -1112,7 +1304,7 @@ ul {
   color: var(--white-color);
 }
 
-.check__text:before {
+.gallery__checkbox-text:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1128,7 +1320,7 @@ ul {
   transition: border-color .3s ease-in-out;
 }
 
-.check__text:after {
+.gallery__checkbox-text:after {
   content: "";
   position: absolute;
   left: 6px;
@@ -1148,32 +1340,32 @@ ul {
   transition: opacity .3s ease-in-out;
 }
 
-.check__input:checked~.check__text:after {
+.gallery__checkbox-input:checked~.gallery__checkbox-text:after {
   opacity: 1;
 }
 
-.check__input:focus-visible~.check__text:before {
+.gallery__checkbox-input:focus-visible~.gallery__checkbox-text:before {
   border: 1px solid var(--wisteria-color);
 }
 
-.check__input:focus-visible~.check__text {
+.gallery__checkbox-input:focus-visible~.gallery__checkbox-text {
   color: var(--wisteria-color);
   outline: none;
 }
 
-.check__input:hover~.check__text:before {
+.gallery__checkbox-input:hover~.gallery__checkbox-text:before {
   border: 1px solid var(--wisteria-color);
 }
 
-.check__input:hover~.check__text {
+.gallery__checkbox-input:hover~.gallery__checkbox-text {
   color: var(--wisteria-color);
 }
 
-.check__input:checked~.check__text::before {
+.gallery__checkbox-input:checked~.gallery__checkbox-text::before {
   border-color: var(--wisteria-color);
 }
 
-.check__input:checked~.check__text {
+.gallery__checkbox-input:checked~.gallery__checkbox-text {
   color: var(--wisteria-color);
 }
 
@@ -1345,68 +1537,6 @@ ul {
 
 /* modals section gallery */
 
-.modal-overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  z-index: 10;
-}
-
-.modal {
-  position: relative;
-  background-color: var(--white-color);
-  width: 900px;
-  height: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: none;
-}
-
-.modal-overlay--visible {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.modal--visible {
-  display: block;
-}
-
-.disable-scroll {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  width: 100%;
-}
-
 .modal__info {
   padding: 121px 50px 121px 49px;
 }
@@ -1447,9 +1577,9 @@ ul {
   cursor: pointer;
 }
 
-.modal__info-close svg {
+/* .modal__info-close svg {
   pointer-events: none;
-}
+} */
 
 
 /* catalog */
@@ -2213,7 +2343,7 @@ ul {
   fill: var(--white-color);
 }
 
-.tooltip__hint {
+.project__tooltip-hidden {
   display: none;
 }
 
@@ -2645,7 +2775,7 @@ ul {
   overflow-x: hidden;
 }
 
-.contacts__map-wrap {
+.map__content-wrap {
   max-width: 100%;
   height: 700px;
 }

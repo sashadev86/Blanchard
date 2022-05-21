@@ -156,12 +156,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // modalsGallery start
 
-  const btns = document.querySelectorAll('.gallery__slide');
+  const btns = document.querySelectorAll('.modal-call');
   const modalOverlay = document.querySelector('.modal-overlay ');
   const modals = document.querySelectorAll('.modal');
   const body = document.body;
   const fixBlocks = document.querySelectorAll('.fix-block');
-  const closeBtns = document.querySelectorAll('.modal__info-close');
+  const closeBtns = document.querySelectorAll('.modal-close-btn');
 
   let disableScroll = function () {
     let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
@@ -538,7 +538,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const initScrollToAnchor = () => {
-    const anchorLinks = document.querySelectorAll('.header__nav-link, .hero__btn');
+    const anchorLinks = document.querySelectorAll('.header__nav-link, .hero__btn, .catalog__artist-link');
     if (anchorLinks.length) {
       anchorLinks.forEach((link) => {
         link.addEventListener('click', (e) => {

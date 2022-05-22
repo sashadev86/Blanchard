@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       value: true,
       errorMessage: 'Для входа нужно ввести пароль!',
     },
-  ])
+  ]);
 
   // header enter form validation finish
 

@@ -1,5 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // header enter form validation start
+
+  const formEnter = document.querySelector('.modal__enter-form');
+  const validationEnter = new JustValidate(formEnter, {
+    errorLabelStyle: {
+      color: '#D11616',
+    },
+  });
+
+  validationEnter
+  .addField('.enter-name', [
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Имя слишком короткое',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Максимальное количество символов 30',
+    },
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Для входа нужно ввести логин!',
+    },
+  ])
+  .addField('.enter-password', [
+    {
+      rule: 'minLength',
+      value: 8,
+      errorMessage: 'Минимальная длинна пароля 8 символов',
+    },
+    {
+      rule: 'required',
+      value: true,
+      errorMessage: 'Для входа нужно ввести пароль!',
+    },
+  ])
+
+  // header enter form validation finish
+
+
+
   // header-bottom-menu -- start
 
   const params = {
@@ -444,7 +488,7 @@ document.addEventListener("DOMContentLoaded", function () {
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
-            console.log('Отправлено');
+            // console.log('Отправлено');
           }
         }
       }
@@ -605,7 +649,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     scrollTo(targetPosition);
   }
-
   // search finish
+
 });
 

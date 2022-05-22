@@ -457,11 +457,20 @@ ul {
 }
 
 .modal__enter-label {
+  position: relative;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
+}
+
+.modal__enter-label .just-validate-error-label {
+  position: absolute;
+    top: -50%;
+    left: 30%;
+    font-size: 14px;
+    line-height: 22px;
 }
 
 .modal__enter-text {

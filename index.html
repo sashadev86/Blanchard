@@ -22,11 +22,26 @@
     <div class="header__top-menu">
       <div class="header__top container flex">
 
-        <a class="header__logo" tabindex="-1">
-          <img src="img/header/logo.svg" alt="Логотип Blanchard">
-        </a>
+        <button class="header__burger-open">
+          <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
+            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+            </svg>
+        </button>
 
-        <nav class="header__nav">
+        <picture class="header__logo">
+          <img src="img/header/logo.svg" alt="Логотип Blanchard">
+        </picture>
+
+        <button class="header__burger-closed">
+          <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
+            <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
+            </svg>
+        </button>
+
+        <nav class="header__nav flex">
           <ul class="header__nav-list flex" aria-label="Навигация по сайту">
             <li class="header__nav-item">
               <a class="header__nav-link background-place" href="#about">О&nbsp;нас</a>
@@ -61,6 +76,15 @@
             <span class="header__enter-text">Войти</span>
           </button>
         </div>
+
+        <button class="header__burger-search">
+          <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79501 20.8721 2.79501 13.5104C2.79501 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+            </svg>
+
+        </button>
+
       </div>
     </div>
 

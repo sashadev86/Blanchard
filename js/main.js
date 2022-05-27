@@ -192,20 +192,20 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     breakpoints: {
-      441: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
-
-      1200: {
+      480: {
         slidesPerView: 2,
         spaceBetween: 34
       },
 
-      1920: {
+      1201: {
         slidesPerView: 3,
         spaceBetween: 50
-      }
+      },
+
+      // 1920: {
+      //   slidesPerView: 3,
+      //   spaceBetween: 50
+      // }
     },
 
     a11y: false,

@@ -1048,7 +1048,7 @@ ul {
 }
 
 .hero__slide-1 {
-  background-image: url("../img/hero/hero-1-1920.jpg");
+  background-image: url("../img/hero/hero-1-1920.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1056,7 +1056,7 @@ ul {
 }
 
 .hero__slide-2 {
-  background-image: url("../img/hero/hero-2-1920.jpg");
+  background-image: url("../img/hero/hero-2-1920.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1064,7 +1064,7 @@ ul {
 }
 
 .hero__slide-3 {
-  background-image: url("../img/hero/hero-3-1920.jpg");
+  background-image: url("../img/hero/hero-3-1920.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1140,6 +1140,8 @@ ul {
 .gallery {
   background-color: var(--black-color);
   background-image: url("../img/gallery/galleryBagr.jpg");
+  background-repeat: no-repeat;
+  background-size:cover
 }
 
 .gallery__container {
@@ -2860,6 +2862,10 @@ ul {
  }
 
  .header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px 60px 75px 60px;
     position: absolute;
     top: 0;
     left: 0;
@@ -2874,13 +2880,9 @@ ul {
  }
 
  .header__nav.active {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
   transform: translateY(0%);
   opacity: 1;
   visibility: visible;
-  padding: 30px 60px 75px 60px;
  }
 
  .header__burger-closed,
@@ -2911,6 +2913,10 @@ ul {
 
  .header__form-search {
   transition: opacity .3s ease-in-out;
+ }
+
+ .header__burger-search {
+  transition: opacity .3s ease-in-out .2s;
  }
 
  .header__burger-search.active {
@@ -2950,11 +2956,27 @@ ul {
   border-bottom: 1px solid var(--white-085-color);
 }
 
-
  /* header bottom */
 
  .header__bottom-menu {
    display: none;
  }
 
+ /* hero */
+
+ .hero__slide-1 {
+   background-image: url("../img/hero/hero-1-1024.webp");
+ }
+
+ .hero__slide-2 {
+   background-image: url("../img/hero/hero-2-1024.webp");
+ }
+
+ .hero__slide-3 {
+   background-image: url("../img/hero/hero-3-1024.webp");
+ }
+
 }
+
+
+

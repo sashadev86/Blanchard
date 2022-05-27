@@ -238,12 +238,13 @@ ul {
 }
 
 .header__nav {
-  width: 58.3%;
-  justify-content: flex-end;
-  margin-right: auto;
+  display: flex;
+  width: 78%;
+  justify-content: space-between;
 }
 
 .header__nav-list {
+  display: flex;
   justify-content: space-between;
   width: 81%;
 }
@@ -255,9 +256,9 @@ ul {
   color: var(--white-color);
 }
 
-/* .header__nav-item:not(:last-child) {
+.header__nav-item:not(:last-child) {
   margin-right: 62px;
-} */
+}
 
 .header__nav-link {
   position: relative;
@@ -2845,4 +2846,116 @@ ul {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
       transform: translateX(0);
+}
+
+
+
+/* @media */
+
+@media (max-width: 1200px) {
+
+ /* header */
+
+ /* header top */
+
+ .header__burger-open {
+   display: block;
+ }
+
+ .header__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -700px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
+    visibility: hidden;
+    z-index: 1;
+ }
+
+ .header__nav.active {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transform: translateY(0%);
+  opacity: 1;
+  visibility: visible;
+  padding: 30px 60px 75px 60px;
+ }
+
+ .header__burger-closed,
+ .header__nav-list,
+ .header__enter-wrap,
+ .header__burger-search {
+   display: block;
+ }
+
+ .header__burger-closed {
+   margin-bottom: 50px;
+ }
+
+  .header__nav-item:not(:last-child) {
+    margin-bottom: 30px;
+ }
+
+ .header__enter {
+   padding: 14px 86px;
+   border: 2px solid var(--amethyst-color);
+   border-radius: 100px;
+   background: transparent;
+ }
+
+ .form-container {
+  display: flex;
+ }
+
+ .header__burger-search {
+   margin-right: 10px;
+ }
+
+ .header__form-search {
+  transition: opacity .3s ease-in-out;
+ }
+
+ .header__burger-search.active {
+  opacity: 0;
+}
+
+.header__form-search {
+  display: flex;
+  align-items: center;
+  padding: 16px 0px 16px 32px;
+
+  width: 42%;
+
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translate(-95%, -50%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out .2s, visibility .3s ease-in-out .2s;
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 16px
+}
+
+.form__active {
+  transform: translate(-97%, -50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+
+ /* header bottom */
+
+ .header__bottom-menu {
+   display: none;
+ }
+
 }

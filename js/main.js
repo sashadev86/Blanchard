@@ -97,6 +97,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  // hamburger start
+
+  document.querySelector(".header__burger-open").addEventListener("click", function() {
+    document.querySelector(".header__nav").classList.add("active");
+  });
+
+  document.querySelector(".header__burger-closed").addEventListener("click", function() {
+    document.querySelector(".header__nav").classList.remove("active");
+  });
+
+  // hamburger finish
+
+
+
+
+  // search 1024, 768, 320 start
+
+  document.querySelector(".header__burger-search").addEventListener("click", function() {
+    document.querySelector(".header__form-search").classList.add("form__active");
+    this.classList.add("active");
+  });
+
+  document.addEventListener("click", function(e) {
+    let target = e.target;
+    let form = document.querySelector(".header__form-search");
+    if (!target.closest(".form-container")) {
+    form.classList.remove("form__active");
+      form.querySelector("input").value = "";
+      document.querySelector(".header__burger-search").classList.remove("active");
+    }
+  });
+
+  document.querySelector(".header__burger-search-closed").addEventListener("click", function() {
+    document.querySelector(".header__form-search").classList.remove("form__active");
+    document.querySelector(".header__burger-search").classList.remove("active");
+  });
+
+   // search 1024, 768, 320 finish
+
+
+
+
   // slider-hero start
 
   const swiper = new Swiper('.hero__swiper', {
@@ -156,6 +198,11 @@ document.addEventListener("DOMContentLoaded", function () {
       },
 
       1200: {
+        slidesPerView: 2,
+        spaceBetween: 34
+      },
+
+      1920: {
         slidesPerView: 3,
         spaceBetween: 50
       }

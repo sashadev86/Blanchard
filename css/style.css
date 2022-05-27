@@ -235,9 +235,13 @@ ul {
 }
 
 .header__top {
-  padding: 26px 41px 27px 58px;
+  padding: 25px 41px 27px 58px;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__logo {
+  padding-top: 5px;
 }
 
 .header__burger-open,
@@ -562,13 +566,14 @@ ul {
 }
 
 .header__bottom {
-  padding-top: 22px;
-  padding-bottom: 23px;
+  padding: 18px 43px 18px 50px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .header__list {
-  width: 64.5%;
+  width: 64.9%;
   justify-content: space-between;
 }
 
@@ -1004,7 +1009,7 @@ ul {
 
 .hero {
   position: relative;
-  padding-bottom: 4px;
+  padding-bottom: 4.5px;
 }
 
 .hero__swiper {
@@ -1087,15 +1092,15 @@ ul {
 }
 
 .hero__title {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 72px;
-  line-height: 82px;
+  line-height: 115%;
   color: var(--white-color);
 }
 
 .hero__text {
-  margin-bottom: 116px;
+  margin-bottom: 114px;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -1136,7 +1141,7 @@ ul {
 
 .about__content {
   max-width: 1087px;
-  padding: 80px 0 69.5px 8px;
+  padding: 80px 0 70.5px 8px;
 }
 
 .about__title {
@@ -1154,7 +1159,7 @@ ul {
 }
 
 .gallery__container {
-  padding: 80px 50px;
+  padding: 80px 42px 80px 58px;
 }
 
 .gallery__wrap {
@@ -1176,7 +1181,7 @@ ul {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: calc(400 / 1510 * 100%);
+  width: calc(400 / 1600 * 100%);
 }
 
 .gallery__title {
@@ -1244,7 +1249,7 @@ ul {
   border: none;
   width: 10px;
   height: 5px;
-  top: 21px;
+  top: 23px;
   right: 15px;
   background-image: url('../img/gallery/arrowGallerySelect.svg');
   background-repeat: no-repeat;
@@ -1597,8 +1602,12 @@ ul {
   padding-bottom: 40px;
 }
 
+.catalog__container {
+  padding: 0 42px 0 57px;
+}
+
 .catalog__title {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
   color: var(--night-rider-color);
 }
 
@@ -1608,10 +1617,8 @@ ul {
 }
 
 .catalog__content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
   grid-column-gap: 50px;
   grid-row-gap: 50px
 }
@@ -1729,6 +1736,10 @@ ul {
 }
 
 /* accordion section catalog */
+
+.accordion {
+  width: 50%;
+}
 
 .accordion__item:first-child .accordion__heading {
   border-top: 1px solid var(--very-light-grey-color);
@@ -2044,12 +2055,13 @@ ul {
 /* events */
 
 .events {
-  padding-top: 40px;
+  padding-top: 42px;
   padding-bottom: 40px;
 }
 
 .events__title {
-  margin-bottom: 16px;
+  padding-left: 8px;
+  margin-bottom: 14px;
   color: var(--night-rider-color);
 }
 
@@ -2191,7 +2203,7 @@ ul {
 .events__container {
   position: relative;
   max-width: 1650px;
-  padding: 0 25px;
+  padding: 0 18px 0 33px;
   margin: 0 auto;
 }
 
@@ -2233,12 +2245,12 @@ ul {
 
 .events__swiper-btn--prev {
   padding-right: 5px;
-  left: 0;
+  left: 8px;
 }
 
 .events__swiper-btn--next {
   padding-left: 5px;
-  right: 0;
+  right: -8px;
 }
 
 .events__swiper-btn.swiper-button-disabled {
@@ -2281,13 +2293,15 @@ ul {
 }
 
 .project__title {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+  padding-left: 8px;
   color: var(--night-rider-color);
 }
 
 .project__text {
   max-width: 1080px;
   margin-bottom: 20px;
+  padding-left: 8px;
 }
 
 /* tooltip section project */
@@ -2433,10 +2447,12 @@ ul {
 
 .project__swiper-container {
   position: relative;
+  padding-left: 12px;
 }
 
 .project__title-slider {
   margin-bottom: 23px;
+  padding-left: 8px;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -2533,12 +2549,12 @@ ul {
 
 .project__swiper-btn--prev {
   padding-right: 2px;
-  left: 0;
+  left: 8px;
 }
 
 .project__swiper-btn--next {
   padding-left: 2px;
-  right: 0;
+  right: -8px;
 }
 
 .project__swiper-btn.swiper-button-prev::after,
@@ -2564,7 +2580,7 @@ ul {
 }
 
 .contacts__container {
-  padding: 35px 50px;
+  padding: 35px 42px 35px 58px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2763,11 +2779,12 @@ ul {
 
 .footer {
   padding-top: 47px;
-  padding-bottom: 48px;
+  padding-bottom: 47px;
   background-color: var(--black-color);
 }
 
 .footer__container {
+  padding: 0 42px 0 58px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;

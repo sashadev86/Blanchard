@@ -360,6 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
   // sliderEvents start
 
   const eventSwiper = new Swiper('.events__swiper', {
@@ -376,12 +377,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // when window width is >= 480px
       480: {
         slidesPerView: 3,
-        spaceBetween: 30
+        spaceBetween: 27,
+        dynamicMainBullets: 2,
       },
       // when window width is >= 640px
-      640: {
+      1201: {
         slidesPerView: 3,
-        spaceBetween: 47
+        spaceBetween: 50
       }
     },
 
@@ -394,6 +396,8 @@ document.addEventListener("DOMContentLoaded", function () {
     pagination: {
       el: '.events__swiper-pagination',
       type: 'bullets',
+      clickable: true,
+      dynamicBullets: true,
     },
 
     navigation: {
@@ -447,11 +451,11 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       // when window width is >= 480px
       480: {
-        slidesPerView: 3,
-        spaceBetween: 30
+        slidesPerView: 2,
+        spaceBetween: 50
       },
       // when window width is >= 640px
-      640: {
+      1201: {
         slidesPerView: 3,
         spaceBetween: 50
       }

@@ -3502,6 +3502,409 @@ ul {
   .footer__container {
     padding: 0 33.5px 0 51.5px;
   }
-
-
 }
+
+@media (max-width: 576px) {
+
+  /* header */
+
+  .header__top {
+    padding: 11px 15px 7.5px 15px;
+  }
+
+  .header__logo {
+    padding-top: 1px;
+    padding-right: 6px;
+  }
+
+  /* hero */
+
+  .hero__slide-1 {
+    background-image: url("../img/hero/hero-1-320.webp");
+  }
+
+  .hero__slide-2 {
+    background-image: url("../img/hero/hero-2-320.webp");
+  }
+
+  .hero__slide-3 {
+    background-image: url("../img/hero/hero-3-320.webp");
+  }
+
+  .hero__container {
+    padding: 0 27px 0 29px;
+  }
+
+  .hero__content {
+    padding: 33.5px 0 41px 0px;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+  }
+
+  .hero__text {
+    margin-bottom: 41px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .hero__btn {
+    padding: 12px 19px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  /* about */
+
+  .about {
+    padding-top: 50px;
+    padding-bottom: 41px;
+  }
+
+  .about__container {
+    padding: 0 15px 0 15px;
+  }
+
+  .about__title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .about__text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  /* gallery */
+
+  .gallery {
+    background-image: url("../img/gallery/galleryBagr320.webp");
+  }
+
+  .gallery__container {
+    padding: 50px 15px;
+  }
+
+  .gallery__title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .gallery__select-title {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--white-color);
+  }
+
+  .gallery__left-content {
+    width: calc(320 / 320 * 100%);
+  }
+
+  .gallery__select {
+    margin-bottom: 30px;
+  }
+
+  .gallery__swiper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .gallery__checkbox {
+    padding-bottom: 30.5px;
+  }
+
+  .gallery__swiper {
+    width: calc(320 / 320 * 100%);
+  }
+
+  .gallery__slide::before {
+    padding-top: calc(126% - 5px);
+  }
+
+  .gallery__navigation {
+    padding: 20px 2px 0 2px;
+    margin-bottom: 30px;
+    margin: 0px auto;
+  }
+
+  /* catalog */
+
+  .catalog {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  .catalog__container {
+    padding: 0 15px;
+  }
+
+  .catalog__title {
+    margin-bottom: 14px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .catalog__title-text {
+    display: none;
+  }
+
+  .accordion__heading {
+    padding: 20px 120px 19px 0;
+  }
+
+  .accordion__heading-text-wrap {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .head-icon  {
+    width: 30px;
+    height: 30px;
+  }
+
+  .accordion__inner-list {
+    column-count: 1;
+    margin-bottom: 0;
+  }
+
+  .accordion__content-wrap {
+    align-items: center;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  .accordion__content-img {
+    width: 79px;
+    height: 122px;
+    padding: 6px;
+  }
+
+  .accordion__content-info {
+    padding-top: 0;
+  }
+
+  .accordion__content-title {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .catalog__artist {
+    top: 0px;
+  }
+
+  .catalog__artist-img {
+    margin-bottom: 16px;
+  }
+
+  .catalog__artist-title {
+    margin-bottom: 13px;
+  }
+
+  /* events */
+
+  .events {
+    padding-top: 11px;
+  }
+
+  .events__title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .events__container-title {
+    padding: 0 15px;
+  }
+
+  .events__title {
+    margin-bottom: 12.5px;
+  }
+
+  .events__container {
+    padding: 0 15px;
+  }
+
+  .events__span {
+    padding: 17px 16px 0 0;
+  }
+
+  .events__card {
+    padding: 10px 24px 48px 22px;
+    min-height: 375px;
+  }
+
+  .events__swiper-wrap {
+    height: 30px;
+  }
+
+  /* project */
+
+  .project {
+    padding-top: 10px;
+    padding-bottom: 37px;
+  }
+
+  .project__container {
+    padding: 0 15px;
+  }
+
+  .project__title {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .project__text {
+    margin-bottom: 10.5px;
+  }
+
+  .project__title-slider {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .project__swiper-container {
+    padding: 0 48px 0 47px;
+  }
+
+  .project__swiper {
+    height: 63px;
+  }
+
+  .project__swiper-content-link {
+    height: 100%;
+  }
+
+  .project__swiper-btn--next {
+    right: 0px;
+    top: 63%;
+  }
+
+  .project__swiper-btn--prev {
+    top: 63%;
+  }
+
+  .project__swiper-img {
+    height: 43%;
+    width: 75%;
+  }
+
+  /* contacts */
+
+  .contacts__container {
+    padding: 14px 15px 18px 15px;
+  }
+
+  .contacts__address {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .contacts__address-title {
+    margin-bottom: -2px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .contacts__address-text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .contacts__form-wrapper {
+    flex-direction: column;
+    margin-bottom: 1px;
+  }
+
+  .contacts__form-input {
+    padding: 3px 23px;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .contacts__form-input:first-child {
+    margin-bottom: 20px;
+  }
+
+  .contacts__form-btn {
+    padding: 10px 27px 10px 25px;
+    width: 130px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .contacts__form-btn span {
+    display: none;
+  }
+
+  .contacts__social-title {
+    margin-bottom: 7px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .contacts__form {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .contacts__social-item-link svg {
+    width: 49px;
+    height: 49px;
+  }
+
+  .contacts__social-item:first-child {
+    margin-right: 30px;
+  }
+
+  /* map */
+
+  .map__content-wrap {
+    height: 318px;
+  }
+
+  /* footer */
+
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  .footer__container {
+    padding: 0 32px 0 55px;
+    flex-direction: column-reverse;
+  }
+
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer__logo {
+    padding: 16px 79px 11px 57px;
+  }
+
+  /* button */
+
+  .button {
+    display: none;
+  }
+}
+
+
+

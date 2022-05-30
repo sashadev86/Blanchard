@@ -192,9 +192,9 @@ document.addEventListener("DOMContentLoaded", function () {
     },
 
     breakpoints: {
-      480: {
+      576: {
         slidesPerView: 2,
-        spaceBetween: 34
+        spaceBetween: 33
       },
 
       1201: {
@@ -370,12 +370,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
-      320: {
+      576: {
         slidesPerView: 2,
-        spaceBetween: 20
+        spaceBetween: 34
       },
       // when window width is >= 480px
-      480: {
+      1024: {
         slidesPerView: 3,
         spaceBetween: 27,
         dynamicMainBullets: 2,
@@ -445,16 +445,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
-      320: {
+      576: {
         slidesPerView: 2,
-        spaceBetween: 20
+        spaceBetween: 34
       },
-      // when window width is >= 480px
-      480: {
+      // when window width is >= 1024px
+      1024: {
         slidesPerView: 2,
         spaceBetween: 50
       },
-      // when window width is >= 640px
+      // when window width is >= 1201px
       1201: {
         slidesPerView: 3,
         spaceBetween: 50

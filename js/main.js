@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // search 1024, 768, 320 start
 
   document.querySelector(".header__burger-search").addEventListener("click", function() {
-    document.querySelector(".header__form-search").classList.add("form__active");
+    document.querySelector(".header__form").classList.add("form__active");
     this.classList.add("active");
   });
 
@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  document.querySelector(".header__burger-search-closed").addEventListener("click", function() {
-    document.querySelector(".header__form-search").classList.remove("form__active");
+  document.querySelector(".header__burger-closed").addEventListener("click", function() {
+    document.querySelector(".header__form").classList.remove("form__active");
     document.querySelector(".header__burger-search").classList.remove("active");
   });
 
@@ -195,6 +195,11 @@ document.addEventListener("DOMContentLoaded", function () {
       576: {
         slidesPerView: 2,
         spaceBetween: 38
+      },
+
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 34
       },
 
       1201: {
@@ -680,27 +685,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const searchBtn = document.querySelector('.header__form-btn');
 
-  searchBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+  if(searchBtn) {
+    searchBtn.addEventListener('click', (e) => {
+      e.preventDefault();
 
-    search()
-  });
+      search()
+    });
 
-  const search = function() {
-    const searchValue = document.querySelector(".header__form-input").value;
+    const search = function() {
+      const searchValue = document.querySelector(".header__form-input").value;
 
-    const targetElement = document.evaluate(`//*[text()[contains(., '${searchValue}')]][last()]`, document.body).iterateNext()
+      const targetElement = document.evaluate(`//*[text()[contains(., '${searchValue}')]][last()]`, document.body).iterateNext()
 
-    targetElement.classList.add('text-highlight')
+      targetElement.classList.add('text-highlight')
 
-    setTimeout(() => {
-      targetElement.classList.remove('text-highlight')
-    }, 4000);
+      setTimeout(() => {
+        targetElement.classList.remove('text-highlight')
+      }, 4000);
 
-    const targetPosition = targetElement.getBoundingClientRect().top;
+      const targetPosition = targetElement.getBoundingClientRect().top;
 
-    scrollTo(targetPosition);
+      scrollTo(targetPosition);
+    }
   }
+
   // search finish
 
 });

@@ -23,9 +23,11 @@
       <div class="header__top container flex">
 
         <button class="header__burger-open">
-          <source srcset="img/header/Burger1024.svg" media="(min-width: 1200px)">
-          <source srcset="img/header/Burger768.svg" media="(min-width: 768px)">
-          <img src="img/header/Burger320.svg" alt="Кнопка бургера">
+          <picture>
+            <source srcset="img/header/Burger1024.svg" media="(min-width: 1200px)">
+            <source srcset="img/header/Burger768.svg" media="(min-width: 768px)">
+            <img src="img/header/Burger320.svg" alt="Кнопка бургера">
+          </picture>
         </button>
 
         <picture class="header__logo">
@@ -38,13 +40,6 @@
         <nav class="header__nav">
 
           <div class="header__nav-wrap">
-            <button class="header__burger-closed">
-              <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"></rect>
-                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white">
-                </rect>
-              </svg>
-            </button>
 
             <ul class="header__nav-list" aria-label="Навигация по сайту">
               <li class="header__nav-item">
@@ -83,27 +78,27 @@
         </nav>
 
         <div class="form-container">
-          <button class="header__burger-search">
-            <source srcset="img/header/search1024.svg" media="(min-width: 1200px)">
-            <source srcset="img/header/search768.svg" media="(min-width: 768px)">
-            <img src="img/header/search320.svg" alt="Кнопка поиска">
-
+          <button class="header__burger-search" type="button">
+            <picture>
+              <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
+              <source srcset="img/header/search768.svg" media="(min-width: 768px)">
+              <img src="img/header/search320.svg" alt="Кнопка поиска">
+            </picture>
           </button>
 
-          <form class="header__form-search" action="/">
-            <button class="header__form-search-btn">
-              <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="9.15446" height="2.28862"
-                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"></rect>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79501 20.8721 2.79501 13.5104C2.79501 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
-                  fill="white"></path>
-              </svg>
+          <form class="header__form " action="/">
+            <button class="header__form-btn" aria-label="Поиск по сайту" type="submit">
+              <picture>
+                <source srcset="img/header/search.svg" media="(min-width: 1200px)">
+                <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
+                <source srcset="img/header/search768.svg" media="(min-width: 768px)">
+                <img src="img/header/search320.svg" alt="Кнопка поиска">
+              </picture>
             </button>
 
-            <input class="header__top-form-input" type="text" placeholder="Поиск по сайту">
+            <input class="header__form-input" type="text" placeholder="Поиск по сайту">
 
-            <button class="header__burger-search-closed" type="button">
+            <button class="header__burger-closed" type="button">
               <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"></rect>
                 <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white">
@@ -240,21 +235,6 @@
             </div>
           </li>
         </ul>
-
-        <form class="header__form flex" action="/">
-          <button class="header__form-btn" aria-label="Поиск по сайту" type="submit">
-            <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695"
-                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                fill="white"></path>
-            </svg>
-          </button>
-
-          <input class="header__form-input" type="text" placeholder="Поиск по сайту">
-        </form>
-
       </div>
     </div>
   </header>
@@ -1093,7 +1073,7 @@
         предпосылок. Банальные, но неопровержимые выводы, а&nbsp;также представители современных социальных
         резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
         с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее:
-        <a class="project__text-link" href="#">blanchard-art.ru</a>
+        <a class="project__text-link" href="#">blanchard-art.ru<span class="project__text-link-project">/projects</span><span class="project__text-link-about">/about</span></a>
       </p>
       <div class="project__tooltip-hidden">
         <div id="one">

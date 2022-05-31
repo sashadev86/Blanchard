@@ -329,7 +329,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   (() => {
     new Accordion(".js-accordion-container", {
-      openOnInit: [0]
+      openOnInit: [0],
+      duration: 500
     });
   })();
 

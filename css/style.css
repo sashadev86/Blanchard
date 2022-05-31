@@ -1744,6 +1744,10 @@ ul {
   width: 50%;
 }
 
+.accordion__item {
+  transition: all .5s ease-in-out;
+}
+
 .accordion__item:first-child .accordion__heading {
   border-top: 1px solid var(--very-light-grey-color);
 }

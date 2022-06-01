@@ -99,13 +99,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // hamburger start
 
-  document.querySelector(".header__burger-open").addEventListener("click", function() {
-    document.querySelector(".header__nav").classList.add("active");
-  });
+  // document.querySelector(".header__burger-open").addEventListener("click", function() {
+  //   document.querySelector(".header__nav").classList.add("active");
+  // });
 
-  document.querySelector(".header__burger-closed").addEventListener("click", function() {
-    document.querySelector(".header__nav").classList.remove("active");
-  });
+  // document.querySelector(".header__burger-closed").addEventListener("click", function() {
+  //   document.querySelector(".header__nav").classList.remove("active");
+  // });
 
   // hamburger finish
 
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  document.querySelector(".header__burger-closed").addEventListener("click", function() {
+  document.querySelector(".header__burger-search-closed").addEventListener("click", function() {
     document.querySelector(".header__form").classList.remove("form__active");
     document.querySelector(".header__burger-search").classList.remove("active");
   });

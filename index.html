@@ -45,6 +45,12 @@
         <nav class="header__nav">
 
           <div class="header__nav-wrap">
+            <button class="header__burger-closed">
+              <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
+                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
+                </svg>
+            </button>
 
             <ul class="header__nav-list" aria-label="Навигация по сайту">
               <li class="header__nav-item">
@@ -82,36 +88,6 @@
           </div>
         </nav>
 
-        <div class="form-container">
-          <button class="header__burger-search" type="button">
-            <picture>
-              <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
-              <source srcset="img/header/search768.svg" media="(min-width: 768px)">
-              <img src="img/header/search320.svg" alt="Кнопка поиска">
-            </picture>
-          </button>
-
-          <form class="header__form " action="/">
-            <button class="header__form-btn" aria-label="Поиск по сайту" type="submit">
-              <picture>
-                <source srcset="img/header/search.svg" media="(min-width: 1200px)">
-                <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
-                <source srcset="img/header/search768.svg" media="(min-width: 768px)">
-                <img src="img/header/search320.svg" alt="Кнопка поиска">
-              </picture>
-            </button>
-
-            <input class="header__form-input" type="text" placeholder="Поиск по сайту">
-
-            <button class="header__burger-closed" type="button">
-              <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"></rect>
-                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white">
-                </rect>
-              </svg>
-            </button>
-          </form>
-        </div>
       </div>
     </div>
 
@@ -240,6 +216,42 @@
             </div>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <div class="container search__container">
+      <div class="form-container">
+        <button class="header__burger-search" type="button">
+          <picture>
+            <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
+            <source srcset="img/header/search768.svg" media="(min-width: 768px)">
+            <img src="img/header/search320.svg" alt="Кнопка поиска">
+          </picture>
+        </button>
+
+        <form class="header__form " action="/">
+          <button class="header__form-btn" aria-label="Поиск по сайту" type="submit">
+            <picture>
+              <source srcset="img/header/search.svg" media="(min-width: 1200px)">
+              <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
+              <source srcset="img/header/search768.svg" media="(min-width: 768px)">
+              <img src="img/header/search320.svg" alt="Кнопка поиска">
+            </picture>
+          </button>
+
+          <label class="header__form-wrap">
+            <input class="header__form-input" type="text" placeholder="Поиск по сайту">
+          </label>
+
+
+          <button class="header__burger-search-closed" type="button">
+            <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"></rect>
+              <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white">
+              </rect>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </header>

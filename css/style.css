@@ -72,11 +72,13 @@ input {
   padding: 0;
 }
 
-button {
+button, .button-all {
   background-color: transparent;
   cursor: pointer;
   border: 0;
   outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:focus-visible,
@@ -3012,6 +3014,10 @@ ul {
     padding-right: 8px;
   }
 
+  .header__nav-list,
+  .header__enter-wrap,
+  .header__burger-search,
+  .header__burger-closed,
   .header__burger-open {
     display: block;
   }
@@ -3038,13 +3044,6 @@ ul {
     transform: translateY(0%);
     opacity: 1;
     visibility: visible;
-  }
-
-  .header__nav-list,
-  .header__enter-wrap,
-  .header__burger-search,
-  .header__burger-closed {
-    display: block;
   }
 
   .header__nav-item:not(:last-child) {

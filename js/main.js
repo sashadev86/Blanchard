@@ -99,13 +99,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // hamburger start
 
-  // document.querySelector(".header__burger-open").addEventListener("click", function() {
-  //   document.querySelector(".header__nav").classList.add("active");
-  // });
+  document.querySelector(".header__burger-open").addEventListener("click", function() {
+    document.querySelector(".header__nav").classList.add("active");
+  });
 
-  // document.querySelector(".header__burger-closed").addEventListener("click", function() {
-  //   document.querySelector(".header__nav").classList.remove("active");
-  // });
+  document.querySelector(".header__burger-closed").addEventListener("click", function() {
+    document.querySelector(".header__nav").classList.remove("active");
+  });
 
   // hamburger finish
 
@@ -683,7 +683,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // search start
 
-  const searchBtn = document.querySelector('.header__form-btn');
+  const searchBtn = document.querySelector('.header__bottom-form-btn');
 
   if(searchBtn) {
     searchBtn.addEventListener('click', (e) => {
@@ -693,7 +693,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const search = function() {
-      const searchValue = document.querySelector(".header__form-input").value;
+      const searchValue = document.querySelector(".header__bottom-form-input").value;
 
       const targetElement = document.evaluate(`//*[text()[contains(., '${searchValue}')]][last()]`, document.body).iterateNext()
 

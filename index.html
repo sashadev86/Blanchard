@@ -27,7 +27,7 @@
     <div class="header__top-menu">
       <div class="header__top container flex">
 
-        <button class="header__burger-open">
+        <button class="header__burger-open button-all">
           <picture>
             <source srcset="img/header/Burger1024.svg" media="(min-width: 1200px)">
             <source srcset="img/header/Burger768.svg" media="(min-width: 768px)">
@@ -45,11 +45,12 @@
         <nav class="header__nav">
 
           <div class="header__nav-wrap">
-            <button class="header__burger-closed">
+            <button class="header__burger-closed button-all">
               <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
-                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
-                </svg>
+                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"></rect>
+                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white">
+                </rect>
+              </svg>
             </button>
 
             <ul class="header__nav-list" aria-label="Навигация по сайту">
@@ -75,7 +76,7 @@
           </div>
 
           <div class="header__enter-wrap">
-            <button class="header__enter modal-call" data-path="enter">
+            <button class="header__enter modal-call button-all" data-path="enter">
               <span class="header__enter-img">
                 <svg width="18" height="13" viewbox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -87,6 +88,37 @@
             </button>
           </div>
         </nav>
+
+        <div class="form-container">
+          <button class="header__burger-search button-all" type="button">
+            <picture>
+              <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
+              <source srcset="img/header/search768.svg" media="(min-width: 768px)">
+              <img src="img/header/search320.svg" alt="Кнопка поиска">
+            </picture>
+          </button>
+
+          <form class="header__form " action="/">
+            <button class="header__form-btn button-all" aria-label="Поиск по сайту" type="submit">
+              <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                </svg>
+            </button>
+
+            <input class="header__form-input" type="text" placeholder="Поиск по сайту">
+
+
+
+            <button class="header__burger-search-closed" type="button">
+              <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"></rect>
+                <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white">
+                </rect>
+              </svg>
+            </button>
+          </form>
+        </div>
 
       </div>
     </div>
@@ -216,10 +248,24 @@
             </div>
           </li>
         </ul>
+
+        <form class="header__bottom-form " action="/">
+          <button class="header__bottom-form-btn button-all" aria-label="Поиск по сайту" type="submit">
+            <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white"></path>
+            </svg>
+          </button>
+
+          <input class="header__bottom-form-input" type="text" placeholder="Поиск по сайту">
+        </form>
       </div>
     </div>
 
-    <div class="container search__container">
+    <!-- <div class="container search__container">
       <div class="form-container">
         <button class="header__burger-search" type="button">
           <picture>
@@ -253,7 +299,7 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> -->
   </header>
 
   <section class="hero">
@@ -934,7 +980,8 @@
               <source srcset="img/events/1events1920.webp" media="(min-width: 1200px)">
               <source srcset="img/events/1events1024.webp" media="(min-width: 1024px)">
               <source srcset="img/events/1events768.webp" media="(min-width: 768px)">
-              <img class="events__picture-img" src="img/events/1events320.webp" alt="Книжная гравюра в живом восприятии">
+              <img class="events__picture-img" src="img/events/1events320.webp"
+                alt="Книжная гравюра в живом восприятии">
             </picture>
             <div class="events__content">
               <span class="events__span">Музей им. Щусева<span>с 20 марта по 30 апреля</span>
@@ -956,7 +1003,8 @@
               <source srcset="img/events/2events1920.webp" media="(min-width: 1200px)">
               <source srcset="img/events/2events1024.webp" media="(min-width: 1024px)">
               <source srcset="img/events/2events768.webp" media="(min-width: 768px)">
-              <img class="events__picture-img" src="img/events/2events320.webp" alt="Фотография Дмитрий Петров и Сергей Ильин.">
+              <img class="events__picture-img" src="img/events/2events320.webp"
+                alt="Фотография Дмитрий Петров и Сергей Ильин.">
             </picture>
             <div class="events__content">
               <span class="events__span">ММОМА<span>24 марта 19:00</span>
@@ -964,7 +1012,8 @@
               <div class="events__card">
                 <h3 class="events__card-title">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.
                 </h3>
-                <p class="events__card-text events__card-title--padding text-all">Высокий уровень вовлечения представителей целевой аудитории
+                <p class="events__card-text events__card-title--padding text-all">Высокий уровень вовлечения
+                  представителей целевой аудитории
                   является
                   четким
                   доказательством простого факта.
@@ -1000,7 +1049,8 @@
               <source srcset="img/events/4events1920.webp" media="(min-width: 1200px)">
               <source srcset="img/events/4events1024.webp" media="(min-width: 1024px)">
               <source srcset="img/events/4events768.webp" media="(min-width: 768px)">
-              <img class="events__picture-img" src="img/events/4events320.webp" alt="Фотография из серии «Метафора серебра»">
+              <img class="events__picture-img" src="img/events/4events320.webp"
+                alt="Фотография из серии «Метафора серебра»">
             </picture>
             <div class="events__content">
               <span class="events__span">ММАМ<span>с 8 апреля по 20 мая</span>
@@ -1090,7 +1140,8 @@
         предпосылок. Банальные, но неопровержимые выводы, а&nbsp;также представители современных социальных
         резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны
         с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее:
-        <a class="project__text-link" href="#">blanchard-art.ru<span class="project__text-link-project">/projects</span><span class="project__text-link-about">/about</span></a>
+        <a class="project__text-link" href="#">blanchard-art.ru<span
+            class="project__text-link-project">/projects</span><span class="project__text-link-about">/about</span></a>
       </p>
       <div class="project__tooltip-hidden">
         <div id="one">

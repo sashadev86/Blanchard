@@ -688,7 +688,7 @@ ul {
 
 .header__dropdown {
   position: absolute;
-  bottom: 0;
+  bottom: -21px;
   left: 0;
   display: none;
   padding: 40px 20px 40px 40px;

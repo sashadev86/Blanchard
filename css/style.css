@@ -50,6 +50,10 @@ body {
   font-family: 'Open Sans';
 }
 
+body.locked {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -688,7 +692,7 @@ ul {
 
 .header__dropdown {
   position: absolute;
-  bottom: -21px;
+  bottom: -21.5px;
   left: 0;
   display: none;
   padding: 40px 20px 40px 40px;
@@ -2992,11 +2996,10 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 37px 60px 51.5px 48px;
+    padding: 37px 60px 51.5px 49px;
     position: absolute;
     top: 0;
     left: 0;
-    bottom: -668px;
     background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     opacity: 0;
@@ -3004,12 +3007,14 @@ ul {
     transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
     visibility: hidden;
     z-index: 1;
+    height: 100vh;
   }
 
   .header__nav.active {
     transform: translateY(0%);
     opacity: 1;
     visibility: visible;
+    overflow-y: auto;
   }
 
   .header__burger-closed {
@@ -3045,25 +3050,24 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0px 10px 20px;
+    padding: 12.5px 0px 10px 20px;
     width: 326px;
-    position: absolute;
-    top: 55%;
-    right: 12.3%;
-    transform: translate(12%, -50%);
+    position: fixed;
+    top: 23.5px;
+    right: -200%;
     opacity: 0;
     visibility: hidden;
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out .2s, visibility .3s ease-in-out .2s;
+    transition: all .9s ease-in-out;
   }
 
   .form__active {
-    transform: translate(12%, -50%);
+    right: 5.5%;
     opacity: 1;
     visibility: visible;
   }
 
   .header__form-input {
-    margin-right: 21px;
+    margin-right: 20px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -3089,7 +3093,7 @@ ul {
   }
 
   .header__form-btn {
-    padding: 0 10.5px 5px 0;
+    padding: 0 10.5px 5px 1px;
   }
 
   .header__burger-search-closed {
@@ -3295,9 +3299,10 @@ ul {
   }
 
   .header__form {
-    padding: 1px 43px 10px 19px;
-    width: 95%;
-    height: 87%;
+    padding: 1px 49.6px 10px 50.6px;
+    width: 100%;
+    height: 75px;
+    top: 17.5px;
     background-color: var(--black-color);
   }
 
@@ -3310,6 +3315,7 @@ ul {
   }
 
   .form__active {
+    right: 0;
     z-index: 2;
   }
 
@@ -3562,7 +3568,7 @@ ul {
   }
 
   .header__nav {
-    padding: 14.5px 60px 137px 13.5px;
+    padding: 14.5px 60px 14.5px 13.5px;
     height: 100vh;
   }
 
@@ -3595,10 +3601,9 @@ ul {
   }
 
   .header__form {
-    right: 12%;
     width: 100%;
-    height: 222%;
-    padding: 9px 15px 10px 55px;
+    padding: 9px 15px 35px 55px;
+    top: 0;
   }
 
   .header__form-input {

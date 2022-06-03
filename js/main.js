@@ -101,10 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelector(".header__burger-open").addEventListener("click", function() {
     document.querySelector(".header__nav").classList.add("active");
+    document.body.classList.add("locked");
   });
 
   document.querySelector(".header__burger-closed").addEventListener("click", function() {
     document.querySelector(".header__nav").classList.remove("active");
+    document.body.classList.remove("locked");
   });
 
   // hamburger finish
@@ -121,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("click", function(e) {
     let target = e.target;
-    let form = document.querySelector(".header__form-search");
+    let form = document.querySelector(".header__form");
     if (!target.closest(".form-container")) {
     form.classList.remove("form__active");
       form.querySelector("input").value = "";
@@ -644,10 +646,17 @@ document.addEventListener("DOMContentLoaded", function () {
       anchorLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
           const currentBlock = link.getAttribute('href');
-          console.log(currentBlock);
+          // console.log(currentBlock);
           const blockTop = document.querySelector(currentBlock).offsetTop;
           e.preventDefault();
           scrollTo(blockTop, 1200);
+
+          const menu = e.target.closest('.header__nav');
+          console.log(menu);
+          if(menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            document.body.classList.remove("locked");
+          }
         });
       });
     }

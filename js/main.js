@@ -692,30 +692,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // search start
 
-  const searchBtn = document.querySelector('.header__bottom-form-btn');
+  const searchBtns = document.querySelectorAll('.search-btn');
 
-  if(searchBtn) {
-    searchBtn.addEventListener('click', (e) => {
-      e.preventDefault();
+  if(searchBtns.length) {
+    searchBtns.forEach(searchBtn => {
+      searchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        search(e.target)
+      });
 
-      search()
-    });
+      const search = function(target) {
+        const searchForm = target.closest("form");
+        const searchValue = searchForm.querySelector(".search-input").value;
 
-    const search = function() {
-      const searchValue = document.querySelector(".header__bottom-form-input").value;
+        const targetElement = document.evaluate(`//*[text()[contains(., '${searchValue}')]][last()]`, document.body).iterateNext()
 
-      const targetElement = document.evaluate(`//*[text()[contains(., '${searchValue}')]][last()]`, document.body).iterateNext()
+        targetElement.classList.add('text-highlight')
 
-      targetElement.classList.add('text-highlight')
+        setTimeout(() => {
+          targetElement.classList.remove('text-highlight')
+        }, 4000);
 
-      setTimeout(() => {
-        targetElement.classList.remove('text-highlight')
-      }, 4000);
+        const targetPosition = targetElement.getBoundingClientRect().top;
 
-      const targetPosition = targetElement.getBoundingClientRect().top;
-
-      scrollTo(targetPosition);
-    }
+        scrollTo(targetPosition);
+      }
+    })
   }
 
   // search finish

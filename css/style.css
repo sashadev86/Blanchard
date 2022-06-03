@@ -181,7 +181,7 @@ ul {
 
 .modal {
   position: relative;
-  background-color: var(--white-color);
+  background-color: transparent;
   width: 900px;
   height: 500px;
   display: -webkit-box;
@@ -440,8 +440,9 @@ ul {
 
 .modal-enter {
   position: relative;
-  width: 500px;
-  height: 450px;
+  margin: 0 15px;
+  max-width: 500px;
+  max-height: 500px;
   padding: 40px 50px;
   border-radius: 5%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -512,6 +513,7 @@ ul {
 
 .modal__enter-input-name,
 .modal__enter-input-password {
+  width: 100%;
   outline: none;
   padding: 10px 0px 10px 10px;
   border-radius: 100px;
@@ -1541,8 +1543,28 @@ ul {
 
 /* modals section gallery */
 
+.modal__content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+}
+
+.modal__content-img {
+  flex: 0 0 400px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__content-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .modal__info {
-  padding: 121px 50px 121px 49px;
+  flex: auto;
+  padding: 121px 50px 40px 49px;
+  overflow-y: auto;
 }
 
 .modal__title-author {
@@ -3270,6 +3292,12 @@ ul {
   .footer__item:not(:last-child) {
     margin-right: 30px;
   }
+
+  /* modal */
+
+  .modal-enter {
+    box-shadow: 4px 4px 100px 0px rgb(255 255 255 / 20%);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -3528,6 +3556,22 @@ ul {
   .footer__container {
     padding: 0 50px 0 51.5px;
   }
+
+  /* modal */
+
+  .modal {
+    width: 594px;
+    height: 100%;
+    padding: 20px 0;
+  }
+
+  .modal__content-img {
+    flex: 0 0 264px;
+  }
+
+  .modal__text-content {
+    line-height: 33px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3542,6 +3586,18 @@ ul {
 
   .contacts__form-input {
     width: 100%;
+  }
+
+  /* modal */
+
+  .modal__enter-label {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .modal__enter-text {
+    flex: 0;
   }
 }
 
@@ -4036,5 +4092,48 @@ ul {
 
   .button {
     display: none;
+  }
+
+  /* modal */
+
+  .modal {
+    width: 100%;
+    height: auto;
+    padding: 0 15px;
+  }
+
+  .modal__enter-content  {
+    padding-top: 40px;
+  }
+
+  .modal__content {
+    flex-direction: column;
+  }
+
+  .modal__content-img {
+    height: 200px;
+  }
+
+  .modal__info {
+    padding: 20px;
+  }
+}
+
+@media (orientation: landscape) {
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal-enter {
+    overflow-y: auto;
+  }
+
+  .modal__info-close {
+    top: 40px;
+  }
+
+  .modal__info {
+    padding: 50px;
   }
 }

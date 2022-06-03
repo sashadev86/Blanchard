@@ -4131,6 +4131,7 @@ ul {
 
   .modal__info-close {
     top: 40px;
+    right: 40px;
   }
 
   .modal__info {

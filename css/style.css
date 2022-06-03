@@ -3049,7 +3049,7 @@ ul {
     width: 326px;
     position: absolute;
     top: 55%;
-    right: 94.5px;
+    right: 12.3%;
     transform: translate(12%, -50%);
     opacity: 0;
     visibility: hidden;
@@ -3089,7 +3089,11 @@ ul {
   }
 
   .header__form-btn {
-    padding-bottom: 5px;
+    padding: 0 10.5px 5px 0;
+  }
+
+  .header__burger-search-closed {
+    padding-left: 3.5px;
   }
 
   .header__burger-search-closed svg {
@@ -3277,7 +3281,7 @@ ul {
   }
 
   .header__burger-search-closed {
-    padding-left: 1px;
+    padding-left: 1.6px;
   }
 
   .header__burger-search-closed svg {
@@ -3293,12 +3297,12 @@ ul {
   .header__form {
     padding: 1px 43px 10px 19px;
     width: 95%;
-    height: 90%;
+    height: 87%;
     background-color: var(--black-color);
   }
 
   .header__form-btn {
-    padding: 3px 8.6px 0 0;
+    padding: 3px 9.5px 0 0;
   }
 
   .header__form-input {

@@ -1563,7 +1563,7 @@ ul {
 
 .modal__info {
   flex: auto;
-  padding: 121px 50px 40px 49px;
+  padding: 50px 40px;
   overflow-y: auto;
 }
 
@@ -3029,7 +3029,9 @@ ul {
     transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
     visibility: hidden;
     z-index: 1;
-    height: 100vh;
+    /* height: 100px; */
+    height: calc(100vh - 50px);
+    /* height: -webkit-fill-available; */
   }
 
   .header__nav.active {
@@ -3561,8 +3563,6 @@ ul {
 
   .modal {
     width: 594px;
-    height: 100%;
-    padding: 20px 0;
   }
 
   .modal__content-img {
@@ -3589,6 +3589,14 @@ ul {
   }
 
   /* modal */
+
+  .modal {
+    padding: 0 40px;
+  }
+
+  .modal__info-close {
+    right: 60px;
+  }
 
   .modal__enter-label {
     flex-direction: column;
@@ -3625,7 +3633,6 @@ ul {
 
   .header__nav {
     padding: 14.5px 60px 14.5px 13.5px;
-    height: 100vh;
   }
 
   .header__nav-list {
@@ -4102,6 +4109,10 @@ ul {
     padding: 0 15px;
   }
 
+  .modal__info-close {
+    right: 40px;
+  }
+
   .modal__enter-content  {
     padding-top: 40px;
   }
@@ -4122,7 +4133,8 @@ ul {
 @media (orientation: landscape) {
 
   .modal {
-    padding: 20px;
+    padding: 0 20px;
+    height: inherit;
   }
 
   .modal-enter {
@@ -4130,7 +4142,7 @@ ul {
   }
 
   .modal__info-close {
-    top: 40px;
+    top: 20px;
     right: 40px;
   }
 

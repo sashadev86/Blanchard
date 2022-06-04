@@ -3029,7 +3029,7 @@ ul {
     transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
     visibility: hidden;
     z-index: 1;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 75px);
   }
 
   .header__nav.active {
@@ -4128,11 +4128,11 @@ ul {
   }
 }
 
-@media (orientation: landscape) {
+@media (max-width: 768px) and (orientation: landscape) {
 
   .modal {
     padding: 0 20px;
-    height: inherit;
+    height: 100%;
   }
 
   .modal-enter {
@@ -4145,6 +4145,6 @@ ul {
   }
 
   .modal__info {
-    padding: 50px;
+    padding: 50px 20px;
   }
 }

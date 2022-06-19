@@ -28,17 +28,17 @@
       <div class="header__top container flex">
 
         <button class="header__burger-open button-all">
-          <picture>
-            <source srcset="img/header/Burger1024.svg" media="(min-width: 1200px)">
-            <source srcset="img/header/Burger768.svg" media="(min-width: 768px)">
-            <img src="img/header/Burger320.svg" alt="Кнопка бургера">
-          </picture>
+          <svg width="36" height="29" viewbox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
+            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+            </svg>
         </button>
 
         <picture class="header__logo">
           <source srcset="img/header/logo.svg" media="(min-width: 1200px)">
           <source srcset="img/header/logo1024.svg" media="(min-width: 1024px)">
-          <source srcset="img/header/logo768.svg" media="(min-width: 768px)">
+          <source srcset="img/header/logo768.svg" media="(min-width: 576px)">
           <img src="img/header/logo320.svg" alt="Логотип Blanchard">
         </picture>
 
@@ -91,11 +91,11 @@
 
         <div class="form-container">
           <button class="header__burger-search button-all" type="button">
-            <picture>
-              <source srcset="img/header/search1024.svg" media="(min-width: 1024px)">
-              <source srcset="img/header/search768.svg" media="(min-width: 768px)">
-              <img src="img/header/search320.svg" alt="Кнопка поиска">
-            </picture>
+            <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+            </svg>
+
           </button>
 
           <form class="header__form " action="/">
@@ -106,7 +106,7 @@
                 </svg>
             </button>
 
-            <input class="header__form-input search-input" type="text" placeholder="Поиск по сайту">
+            <input class="header__form-input search-input" type="search" placeholder="Поиск по сайту">
 
 
 
@@ -260,7 +260,7 @@
             </svg>
           </button>
 
-          <input class="header__bottom-form-input search-input" type="text" placeholder="Поиск по сайту">
+          <input class="header__bottom-form-input search-input" type="search" placeholder="Поиск по сайту">
         </form>
       </div>
     </div>
@@ -277,7 +277,8 @@
 
     <div class="container hero__container">
       <div class="hero__content">
-        <h1 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
+        <h1 class="hero__title-hidden">Художественная галерея "Blanchard"</h1>
+        <h2 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
         <p class="hero__text">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий
           создаёт предпосылки для новых предложений.</p>
         <a class="hero__btn button-all" href="#contact">Подписаться на&nbsp;рассылку</a>
@@ -1057,8 +1058,8 @@
           <div class="events__swiper-pagination swiper-pagination"></div>
         </div>
       </div>
-      <div class="events__swiper-btn events__swiper-btn--prev swiper-button-prev"></div>
-      <div class="events__swiper-btn events__swiper-btn--next swiper-button-next"></div>
+      <div class="events__swiper-btn events__swiper-btn--prev swiper-button-prev button-all"></div>
+      <div class="events__swiper-btn events__swiper-btn--next swiper-button-next button-all"></div>
     </div>
   </section>
 

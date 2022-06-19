@@ -378,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
-      576: {
+      680: {
         slidesPerView: 2,
         spaceBetween: 34
       },
@@ -652,7 +652,7 @@ document.addEventListener("DOMContentLoaded", function () {
           scrollTo(blockTop, 1200);
 
           const menu = e.target.closest('.header__nav');
-          console.log(menu);
+          // console.log(menu);
           if(menu.classList.contains('active')) {
             menu.classList.remove('active');
             document.body.classList.remove("locked");

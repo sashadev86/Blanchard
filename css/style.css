@@ -108,6 +108,13 @@ ul {
   list-style: none;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  appearance: none;
+}
+
 .title-all {
   font-weight: 400;
   font-size: 48px;
@@ -184,6 +191,7 @@ ul {
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   z-index: 10;
+  cursor: pointer;
 }
 
 .modal {
@@ -476,6 +484,7 @@ ul {
   padding: 40px 50px;
   border-radius: 5%;
   background-color: rgba(0, 0, 0, 0.7);
+  cursor: auto;
 }
 
 .modal__enter-content {
@@ -1194,6 +1203,10 @@ ul {
   padding: 140px 8px;
 }
 
+.hero__title-hidden {
+  display: none;
+}
+
 .hero__title {
   margin-bottom: 20px;
   font-weight: 700;
@@ -1672,6 +1685,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: var(--white-color);
+  cursor: auto;
 }
 
 .modal__content-img {
@@ -3018,7 +3032,7 @@ ul {
   top: auto;
   left: auto;
   right: 50px;
-  bottom: 15vh;
+  bottom: 5vh;
   -webkit-transition: all .3s ease 0s;
   -o-transition: all .3s ease 0s;
   transition: all .3s ease 0s;
@@ -3028,8 +3042,8 @@ ul {
 }
 
 .button__to-top svg {
-  width: 128px;
-  height: 128px;
+  width: 64px;
+  height: 64px;
   fill: var(--amethyst-color);
   -webkit-transition: fill .3s ease-in-out;
   -o-transition: fill .3s ease-in-out;
@@ -3495,7 +3509,7 @@ ul {
   /* header */
 
   .header__top {
-    padding: 29px 49px 25.5px 50px;
+    padding: 29px 49.5px 25.5px 50px;
   }
 
   .header__logo {
@@ -3512,8 +3526,12 @@ ul {
   }
 
   .header__burger-search {
-    padding-top: 1px;
     z-index: 1;
+  }
+
+  .header__burger-search  svg {
+    width: 26.66px;
+    height: 26.66px;
   }
 
   .header__form {
@@ -3779,6 +3797,20 @@ ul {
 
 @media (max-width: 768px) {
 
+  /* hero */
+
+  .hero__title {
+    font-size: 62px;
+  }
+
+  /* catalog */
+
+  .accordion__inner-list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+
   .contacts__form {
     margin-right: 0;
   }
@@ -3830,6 +3862,16 @@ ul {
   .header__logo {
     padding-top: 1px;
     padding-right: 6px;
+  }
+
+  .header__burger-open svg {
+    width: 25px;
+    height: 18px;
+  }
+
+  .header__burger-search svg {
+    width: 18px;
+    height: 18px;
   }
 
   .header__burger-closed {
@@ -4064,7 +4106,7 @@ ul {
   }
 
   .accordion__heading {
-    padding: 19px 120px 20px 0;
+    padding: 19px 120px 20.5px 0;
   }
 
   .accordion__heading-text-wrap {

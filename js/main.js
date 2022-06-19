@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // preloader start
+
+  window.onload = function() {
+    let preloader = document.getElementById('preloader');
+    preloader.classList.add('hide-preloader');
+    setInterval(function() {
+          preloader.classList.add('preloader-hidden');
+    }, 990);
+  }
+
+  // preloader finish
+
   // header enter form validation start
 
   const formEnter = document.querySelector('.modal__enter-form');

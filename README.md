@@ -3,7 +3,7 @@
 ---
 
 #### Ссылка на деплой: ##
-- https://banditos86.github.io/Blanchard/
+- https://sashadev86.github.io/Blanchard/
 
 ---
 
